@@ -8,20 +8,22 @@ export const HowItWorks: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-white border-t border-border-primary">
-      <div className="container mx-auto px-4 md:px-20 flex flex-col items-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-16 tracking-tight text-center">Three steps to perfect images.</h2>
-        <div className="grid md:grid-cols-3 gap-6 w-full">
+    <section className="py-24 md:py-32 bg-white border-b border-black">
+      <div className="container mx-auto px-6 md:px-20 flex flex-col items-center">
+        <h2 className="text-4xl md:text-6xl font-outfit font-black text-black mb-16 tracking-tight text-center uppercase leading-none border-b-[3px] border-black pb-8 px-8">
+          Three steps to <br/>perfect images.
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8 w-full">
           {steps.map((step, i) => (
-            <div key={i} className="bg-surface-soft-white border border-border-primary p-8 rounded-[24px] flex flex-col gap-4">
-              <span className="text-brand-primary text-sm font-bold tracking-tight uppercase">{step.id}</span>
-              <h3 className="text-[20px] font-bold text-gray-900 leading-tight">{step.title}</h3>
-              <p className="text-sm text-text-secondary leading-relaxed">{step.desc}</p>
+            <div key={i} className="bg-white border-2 border-black p-8 rounded-md flex flex-col gap-6 shadow-[6px_6px_0px_#121212] hover:-translate-y-1 hover:shadow-[8px_8px_0px_#6366F1] transition-all">
+              <span className="bg-black text-white w-fit px-3 py-1 rounded-sm text-[10px] font-black tracking-widest uppercase">{step.id}</span>
+              <h3 className="text-xl font-outfit font-black text-black leading-tight uppercase">{step.title}</h3>
+              <p className="text-xs font-bold tracking-wide text-gray-700 leading-relaxed uppercase">{step.desc}</p>
             </div>
           ))}
         </div>
-        <button className="mt-16 bg-brand-primary text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-blue-900/10 active:scale-95 duration-200">
-           Create a Job →
+        <button className="mt-20 bg-black text-white px-10 py-5 rounded-md text-[11px] font-black tracking-[0.15em] uppercase border border-black shadow-[5px_5px_0px_#6366F1] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_#6366F1] transition-all">
+           Create a Job —
         </button>
       </div>
     </section>

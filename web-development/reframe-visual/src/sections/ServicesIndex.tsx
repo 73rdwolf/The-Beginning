@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Image as ImageIcon, Maximize, Scissors, Sparkles, Layers, Frame, Focus, Palette, User } from 'lucide-react';
+import { ArrowRight, Image as ImageIcon, Maximize, Scissors, Sparkles, Layers, Frame, Palette, User } from 'lucide-react';
 
 const services = [
   { name: "Background Removal", icon: Scissors, desc: "Clean, precise cutouts for any product image." },
@@ -14,13 +14,14 @@ const services = [
 
 export const ServicesIndex: React.FC = () => {
   return (
-    <section id="services" className="py-24 md:py-32 bg-white">
-      <div className="container mx-auto px-4 md:px-20">
-        <div className="flex flex-col items-center text-center gap-6 mb-16 md:mb-24">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#101012]">
-            What we offer
+    <section id="services" className="py-24 md:py-32 bg-white border-b border-black">
+      <div className="container mx-auto px-6 md:px-20 border-l-[3px] border-black pl-8 lg:px-24">
+        
+        <div className="flex flex-col gap-6 mb-16 md:mb-24 mt-8">
+          <h2 className="text-4xl md:text-6xl lg:text-[72px] font-outfit font-black tracking-tight text-black uppercase leading-[0.9]">
+            What <br/>we offer.
           </h2>
-          <p className="text-xl text-text-secondary max-w-2xl leading-relaxed">
+          <p className="text-sm font-bold tracking-widest text-[#6366F1] uppercase max-w-2xl leading-relaxed">
             19 specialized editing services — from background removal to high-end retouching. 
             All performed by expert human editors.
           </p>
@@ -28,19 +29,19 @@ export const ServicesIndex: React.FC = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((svc, i) => (
-            <div key={i} className="group p-8 rounded-3xl border border-border-primary hover:border-brand-primary/20 hover:bg-surface-soft-white transition-all duration-300">
-              <div className="w-12 h-12 bg-surface-atmosphere rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand-primary/10 transition-all duration-300">
-                <svc.icon className="w-6 h-6 text-brand-primary" />
+            <div key={i} className="group p-8 rounded-lg border-2 border-black bg-white hover:bg-[#F9F9F9] shadow-[6px_6px_0px_#6366F1] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_#6366F1] duration-200">
+              <div className="w-12 h-12 bg-black rounded-md flex items-center justify-center mb-8 border border-black">
+                <svc.icon className="w-5 h-5 text-white" strokeWidth={2.5} />
               </div>
-              <h3 className="text-lg font-bold text-[#101012] mb-2">{svc.name}</h3>
-              <p className="text-sm text-text-secondary leading-relaxed">{svc.desc}</p>
+              <h3 className="text-base font-outfit font-black text-black uppercase mb-3 tracking-wide">{svc.name}</h3>
+              <p className="text-xs font-medium text-black leading-relaxed">{svc.desc}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <a href="/services" className="inline-flex items-center gap-2 text-brand-primary font-semibold text-lg hover:underline underline-offset-4">
-            Explore All 19 Services <ArrowRight className="w-5 h-5" />
+        <div className="mt-20">
+          <a href="/services" className="inline-flex items-center justify-center gap-3 bg-white text-black border-2 border-black rounded-md px-8 py-4 text-[11px] font-black tracking-[0.15em] uppercase hover:bg-black hover:text-white transition-all shadow-[4px_4px_0px_#121212]">
+            Explore All 19 Services <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </div>

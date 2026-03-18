@@ -14,30 +14,30 @@ export const Differentiation: React.FC = () => {
   return (
     <section className="py-24 md:py-32 bg-white border-b border-black">
       <div className="container mx-auto px-6 md:px-20">
-        <div className="flex flex-col gap-12 mb-24 max-w-2xl">
-          <h2 className="text-5xl md:text-8xl font-black text-black leading-none uppercase">
+        <div className="flex flex-col gap-8 mb-20 max-w-2xl border-l-[3px] border-black pl-8">
+          <h2 className="text-5xl md:text-8xl font-outfit font-black text-black leading-none uppercase">
             The <br />shift.
           </h2>
-          <p className="text-xl text-black font-medium leading-relaxed max-w-lg border-l-4 border-black pl-8">
+          <p className="text-sm font-bold tracking-widest text-black uppercase leading-relaxed max-w-lg">
             Image editing hasn't changed much in 20 years. Reframe started over 
             with a focus on transparency and human expertise.
           </p>
         </div>
 
-        <div className="border-t border-l border-black bg-white">
-          <div className="grid grid-cols-3 border-r border-black bg-black text-white py-8 px-10">
-            <div className="text-xs font-black uppercase tracking-widest">Capabilities</div>
-            <div className="text-xs font-black uppercase tracking-widest opacity-40">The Industry Standard</div>
-            <div className="text-xs font-black uppercase tracking-widest text-brand-primary">Reframe Visual</div>
+        <div className="border-t-[3px] border-l-[3px] border-black bg-white rounded-tr-md overflow-hidden shadow-[8px_8px_0px_#6366F1]">
+          <div className="grid grid-cols-3 border-r-[3px] border-black bg-black text-white py-8 px-10">
+            <div className="text-[10px] font-black uppercase tracking-widest">Capabilities</div>
+            <div className="text-[10px] font-black uppercase tracking-widest opacity-60">The Industry Standard</div>
+            <div className="text-[10px] font-black uppercase tracking-widest text-[#6366F1]">Reframe Visual</div>
           </div>
           {comparisons.map((row, i) => (
-            <div key={i} className="grid grid-cols-3 border-r border-b border-black group hover:bg-bg-secondary transition-colors">
-              <div className="px-10 py-10 font-black text-xs uppercase tracking-widest border-r border-black">{row.feature}</div>
-              <div className="px-10 py-10 text-xs font-bold uppercase text-gray-400 flex items-center gap-3 border-r border-black">
-                <X className="w-4 h-4" /> {row.industry}
+            <div key={i} className="grid grid-cols-3 border-r-[3px] border-b-[3px] border-black bg-white hover:bg-gray-100 transition-colors">
+              <div className="px-10 py-8 font-black text-[11px] uppercase tracking-widest border-r-[3px] border-black flex items-center text-black">{row.feature}</div>
+              <div className="px-10 py-8 text-[11px] font-black uppercase text-gray-400 flex items-center gap-4 border-r-[3px] border-black tracking-widest">
+                <X className="w-5 h-5" strokeWidth={3} /> {row.industry}
               </div>
-              <div className="px-10 py-10 text-xs font-black uppercase text-black flex items-center gap-3">
-                <Check className="w-4 h-4 text-brand-primary" /> {row.reframe}
+              <div className="px-10 py-8 text-[11px] font-black uppercase text-black flex items-center gap-4 tracking-widest">
+                <Check className="w-5 h-5 text-[#6366F1]" strokeWidth={3} /> {row.reframe}
               </div>
             </div>
           ))}

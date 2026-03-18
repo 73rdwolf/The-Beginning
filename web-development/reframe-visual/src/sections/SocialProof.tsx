@@ -8,14 +8,16 @@ export const SocialProof: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-bg-secondary border-t border-border-primary">
-      <div className="container mx-auto px-4 md:px-20">
-        <h2 className="text-4xl font-bold text-gray-900 mb-16 tracking-tight">The numbers speak.</h2>
-        <div className="grid md:grid-cols-3 gap-6">
+    <section className="py-24 md:py-32 bg-white border-b border-black">
+      <div className="container mx-auto px-6 md:px-20 border-l-[3px] border-black pl-8 lg:px-24">
+        <h2 className="text-4xl md:text-6xl font-outfit font-black text-black mb-16 tracking-tight uppercase leading-none">
+          The numbers <br/>speak.
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
           {stats.map((stat, i) => (
-            <div key={i} className="bg-[#FDFDFF] border border-border-primary p-6 rounded-2xl flex flex-col items-center text-center gap-2">
-              <div className="text-5xl font-bold text-brand-primary tracking-tighter">{stat.num}</div>
-              <div className="text-sm text-text-secondary leading-relaxed font-normal">{stat.desc}</div>
+            <div key={i} className="bg-white border-2 border-black p-8 rounded-md flex flex-col items-start gap-4 shadow-[6px_6px_0px_#6366F1] hover:-translate-y-1 hover:shadow-[8px_8px_0px_#6366F1] transition-all">
+              <div className="text-6xl font-outfit font-black text-black tracking-tighter">{stat.num}</div>
+              <div className="text-[11px] font-bold text-black uppercase tracking-widest leading-relaxed">{stat.desc}</div>
             </div>
           ))}
         </div>

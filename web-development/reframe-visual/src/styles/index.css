@@ -1,18 +1,24 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap');
+
 @theme {
-  --color-brand-primary: #735CDD;
-  --color-surface-soft-white: #F8F9FA;
-  --color-surface-atmosphere: #F3F4F6;
-  --color-bg-secondary: #F1F5F9;
-  --color-bg-dark: #0F172A;
-  --color-bg-dark-surface: #1E293B;
-  --color-text-secondary: #64748B;
-  --color-text-muted: #94A3B8;
-  --color-border-primary: #E2E8F0;
-  --color-accent-blue: #3B82F6;
+  --color-white: #F9F9F9;
+  --color-black: #121212;
+
+  --color-brand-primary: #6366F1;
+  --color-brand-purple-shadow: #6366F1;
+  --color-surface-soft-white: #F9F9F9;
+  --color-surface-atmosphere: #F9F9F9;
+  --color-bg-secondary: #121212;
+  --color-bg-dark: #121212;
+  --color-bg-dark-surface: #1A1A1A;
+  --color-text-secondary: #121212;
+  --color-text-muted: #666666;
+  --color-border-primary: #121212;
 
   --font-inter: "Inter", system-ui, sans-serif;
+  --font-outfit: "Outfit", system-ui, sans-serif;
 
   @keyframes scroll {
     from { transform: translateX(0); }
@@ -27,7 +33,7 @@
 :root {
   font-family: var(--font-inter);
   background-color: var(--color-surface-atmosphere);
-  color: #101012;
+  color: #121212;
 }
 
 body {

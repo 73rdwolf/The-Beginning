@@ -4,25 +4,27 @@ export const BeforeAfterGrid: React.FC = () => {
   const samples = ["BG Removal", "Jewelry Retouch", "Ghost Mannequin", "Model Retouch"];
 
   return (
-    <section className="py-24 md:py-32 bg-white border-t border-border-primary">
-      <div className="container mx-auto px-4 md:px-20">
-        <div className="flex flex-col gap-2 mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 tracking-tight leading-tight">See the results.</h2>
-          <p className="text-xl text-text-secondary leading-relaxed font-normal">Every service. Every detail. Real samples from Reframe editors.</p>
+    <section className="py-24 md:py-32 bg-white border-b border-black">
+      <div className="container mx-auto px-6 md:px-20">
+        <div className="flex flex-col gap-4 mb-16 border-l-[3px] border-black pl-8">
+          <h2 className="text-5xl md:text-6xl font-outfit font-black text-black tracking-tight leading-none uppercase">See the results.</h2>
+          <p className="text-sm font-bold tracking-widest text-[#6366F1] leading-relaxed uppercase">Every service. Every detail. Real samples from Reframe editors.</p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {samples.map((label, i) => (
-            <div key={i} className="flex flex-col gap-2 group cursor-pointer">
-              <div className="relative h-40 overflow-hidden rounded-2xl border border-border-primary">
-                 <div className="absolute inset-0 bg-gradient-to-tr from-[#E8E8E8] to-[#D0D0D0]"></div>
-                 <div className="absolute inset-0 bg-gradient-to-tr from-[#EAF3DE] to-[#D4E5C7] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div key={i} className="flex flex-col gap-4 group cursor-pointer">
+              <div className="relative h-48 md:h-64 overflow-hidden rounded-md border-2 border-black bg-black shadow-[4px_4px_0px_#121212] group-hover:shadow-[6px_6px_0px_#6366F1] group-hover:-translate-y-1 transition-all">
+                 <div className="absolute inset-0 bg-[#1A1A1A] flex items-center justify-center text-[10px] text-white/30 uppercase tracking-widest font-black">
+                    Sample Plate
+                 </div>
+                 <div className="absolute inset-0 bg-[#6366F1]/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </div>
-              <span className="text-[13px] text-text-secondary text-center font-normal">{label}</span>
+              <span className="text-[11px] font-black text-black uppercase tracking-widest">{label}</span>
             </div>
           ))}
         </div>
-        <div className="mt-12 text-center">
-           <a href="#" className="text-brand-primary font-semibold hover:underline">Explore All 19 Services →</a>
+        <div className="mt-16 text-center">
+           <a href="#services" className="inline-flex items-center justify-center gap-3 bg-white text-black border-2 border-black rounded-md px-8 py-4 text-[11px] font-black tracking-[0.15em] uppercase hover:bg-black hover:text-white transition-all shadow-[4px_4px_0px_#121212]">Explore All 19 Services —</a>
         </div>
       </div>
     </section>
