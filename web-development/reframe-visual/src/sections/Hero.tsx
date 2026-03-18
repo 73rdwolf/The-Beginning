@@ -31,10 +31,10 @@ export const Hero: React.FC = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8 mt-4">
-            <button className="bg-black text-white rounded-md px-10 py-5 text-[11px] font-black tracking-[0.15em] uppercase shadow-[6px_6px_0px_#6366F1] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_#6366F1] transition-all">
+            <button onClick={() => window.location.href='/jobs/new/services'} className="bg-black text-white rounded-md px-10 py-5 text-[11px] font-black tracking-[0.15em] uppercase shadow-[6px_6px_0px_#6366F1] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_#6366F1] transition-all">
               Get 3 Images Edited Free —
             </button>
-            <button className="text-[11px] font-black tracking-[0.15em] uppercase hover:underline underline-offset-4 cursor-pointer text-gray-600 hover:text-black">
+            <button onClick={() => window.location.href='/services'} className="text-[11px] font-black tracking-[0.15em] uppercase hover:underline underline-offset-4 cursor-pointer text-gray-600 hover:text-black">
               See the difference
             </button>
           </div>

@@ -12,16 +12,16 @@ export const Navigation: React.FC = () => {
       </div>
       
       <nav className="hidden lg:flex items-center gap-12">
-        <a href="#services" className="text-[11px] font-black tracking-[0.15em] hover:text-brand-primary transition-colors uppercase">Services</a>
-        <a href="#pricing" className="text-[11px] font-black tracking-[0.15em] hover:text-brand-primary transition-colors uppercase">Pricing</a>
-        <a href="#about" className="text-[11px] font-black tracking-[0.15em] hover:text-brand-primary transition-colors uppercase">About</a>
+        <a href="/services" className="text-[11px] font-bold tracking-widest text-black/60 hover:text-black transition-all duration-300 ease-out uppercase">Services</a>
+        <a href="/pricing" className="text-[11px] font-bold tracking-widest text-black/60 hover:text-black transition-all duration-300 ease-out uppercase">Pricing</a>
+        <a href="/about" className="text-[11px] font-bold tracking-widest text-black/60 hover:text-black transition-all duration-300 ease-out uppercase">About</a>
       </nav>
 
       <div className="flex items-center gap-8">
-        <button className="hidden md:flex items-center gap-2 text-[11px] font-black tracking-[0.15em] uppercase hover:text-brand-primary transition-colors">
+        <button onClick={() => window.location.href='/login'} className="hidden md:flex items-center gap-2 text-[11px] font-bold tracking-widest text-black/60 hover:text-black uppercase transition-all duration-300 ease-out">
           Login
         </button>
-        <button className="bg-black text-white px-6 py-3 rounded-md text-[10px] font-black tracking-[0.15em] uppercase border border-black shadow-[4px_4px_0px_#6366F1] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#6366F1] transition-all">
+        <button onClick={() => window.location.href='/jobs/new/services'} className="bg-black text-white px-8 py-4 rounded-md text-[10px] font-bold tracking-widest uppercase hover:-translate-y-0.5 shadow-[0_8px_30px_rgba(124,58,237,0.06)] hover:shadow-[0_16px_40px_rgba(124,58,237,0.15)] transition-all duration-300 ease-out">
           Start for Free —
         </button>
         <div className="lg:hidden p-2">

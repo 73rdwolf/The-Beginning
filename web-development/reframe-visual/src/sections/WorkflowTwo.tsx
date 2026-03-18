@@ -16,7 +16,7 @@ export const WorkflowTwo: React.FC = () => {
             Outsourcing to unregulated marketplaces means inconsistent quality, slow communication, 
             and paying upfront for work you haven't seen. It doesn't scale.
           </p>
-          <a href="#scale" className="w-fit text-[11px] font-black tracking-[0.15em] uppercase text-black hover:text-[#6366F1] hover:underline underline-offset-4 cursor-pointer mt-4">
+          <a href="/services" className="w-fit text-[11px] font-black tracking-[0.15em] uppercase text-black hover:text-[#6366F1] hover:underline underline-offset-4 cursor-pointer mt-4">
             See how Reframe scales →
           </a>
         </div>

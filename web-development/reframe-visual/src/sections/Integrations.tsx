@@ -24,7 +24,7 @@ export const Integrations: React.FC = () => {
               <br/>Shopify and Zapier integrations coming soon.
             </p>
           </div>
-          <a href="#how" className="w-fit text-[11px] font-black tracking-[0.15em] uppercase text-black hover:text-[#6366F1] hover:underline underline-offset-4 cursor-pointer">
+          <a href="/about" className="w-fit text-[11px] font-black tracking-[0.15em] uppercase text-black hover:text-[#6366F1] hover:underline underline-offset-4 cursor-pointer">
             See how uploads work →
           </a>
         </div>

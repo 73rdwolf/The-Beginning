@@ -24,7 +24,7 @@ export const BeforeAfterGrid: React.FC = () => {
           ))}
         </div>
         <div className="mt-16 text-center">
-           <a href="#services" className="inline-flex items-center justify-center gap-3 bg-white text-black border-2 border-black rounded-md px-8 py-4 text-[11px] font-black tracking-[0.15em] uppercase hover:bg-black hover:text-white transition-all shadow-[4px_4px_0px_#121212]">Explore All 19 Services —</a>
+           <a href="/services" className="inline-flex items-center justify-center gap-3 bg-white text-black border-2 border-black rounded-md px-8 py-4 text-[11px] font-black tracking-[0.15em] uppercase hover:bg-black hover:text-white transition-all shadow-[4px_4px_0px_#121212]">Explore All 19 Services —</a>
         </div>
       </div>
     </section>
