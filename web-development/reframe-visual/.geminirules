@@ -1,0 +1,8 @@
+# AntiGravity Design & Development Rules
+
+1. **Strict Approval Gateway:** Updates should only be pushed to the primary GitHub branch after receiving explicit approval.
+2. **Branching Strategy:** For significant code revisions, create a new branch and push updates there for clean auditing.
+3. **Link Integration:** When providing merge requests, always include a direct hyperlink to the folder containing the file, with the file pre-selected.
+4. **Visual Prototyping:** When requested frontend/UI modifications, provide an ASCII art representation beforehand for clarity.
+5. **Execution Loop:** Run the application after completing revisions (if not active) to ensure seamless development.
+6. **No Assumptions (ANTI-ASSUMPTION PROTOCOL):** Do not make unprompted assumptions about design, architecture, or flow. If any requirement is confusing or heavily open-ended, STOP and provide the user with a list of specific questions containing numbered, multiple-choice options. Wait for the user to select an option before proceeding.

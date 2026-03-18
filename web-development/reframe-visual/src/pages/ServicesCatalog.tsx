@@ -33,7 +33,7 @@ export const ServicesCatalog: React.FC = () => {
             <h2 className="text-2xl font-outfit font-bold uppercase tracking-tight text-[#6366F1] mb-8 border-b-2 border-black pb-4">{group.category}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {group.items.map((svc, sIdx) => (
-                <div key={sIdx} className="bg-white border-2 border-black p-8 rounded-3xl shadow-[4px_4px_0px_#121212] hover:-translate-y-1 hover:shadow-[8px_8px_0px_#121212] transition-all flex flex-col">
+                <a href={`/services/${svc.name.toLowerCase().replace(/\s+/g, '-').replace(/\(.*\)/g, '').trim()}`} key={sIdx} className="bg-white border-2 border-black p-8 rounded-3xl shadow-[4px_4px_0px_#121212] hover:-translate-y-1 hover:shadow-[8px_8px_0px_#121212] transition-all flex flex-col group cursor-pointer block">
                   <div className="flex flex-col mb-4">
                     <h3 className="text-lg font-bold uppercase tracking-tight mb-2">{svc.name}</h3>
                     <span className="bg-black/5 text-[#121212] text-[9px] uppercase font-bold tracking-tight px-2 py-1 self-start">{svc.time}</span>
@@ -41,7 +41,7 @@ export const ServicesCatalog: React.FC = () => {
                   <p className="text-black/70 text-sm font-medium mb-8 flex-grow">{svc.desc}</p>
                   <div className="flex justify-between items-center border-t-2 border-black/10 pt-4 mt-auto">
                     <div className="text-xl font-black font-outfit">{svc.price} <span className="text-[10px] text-black/50 font-medium">/ IMG</span></div>
-                    <button className="text-[10px] uppercase font-bold tracking-widest text-[#6366F1] hover:underline">Add to Job</button>
+                    <span className="text-[10px] uppercase font-bold tracking-widest text-black/50 group-hover:text-[#6366F1] transition-colors">Deep Dive —</span>
                   </div>
                 </div>
               ))}

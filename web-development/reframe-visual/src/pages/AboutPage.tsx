@@ -6,25 +6,28 @@ export const AboutPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#F9F9F9] flex flex-col font-inter">
       <Navigation />
-      <main className="flex-grow py-24 px-10 md:px-20 lg:px-[10%] xl:px-[12%]">
-        <div className="max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-outfit font-black tracking-tight uppercase text-black mb-8">About Reframe</h1>
-          <h2 className="text-2xl text-[#6366F1] font-outfit font-bold italic uppercase tracking-tighter mb-12">/ AI runs the workflow. Humans do the editing.</h2>
+      <main className="flex-grow">
+        <div className="py-24 px-10 md:px-20 lg:px-[10%] xl:px-[12%]">
+          <h1 className="text-5xl md:text-7xl font-outfit font-black uppercase tracking-tight mb-8">The Reframe Engine</h1>
+          <p className="text-xl font-medium max-w-3xl text-black/70 leading-relaxed mb-16">
+            We are a hybrid team of master retouchers and workflow automation engineers. 
+            We built Reframe Visual to solve the single largest bottleneck in global e-commerce: 
+            Scaling ultra-premium image output without losing the human artisan touch.
+          </p>
           
-          <div className="prose prose-lg text-black/80 font-medium">
-            <p className="mb-6">The industry standard for image editing was built for volume resellers, not the businesses doing the actual selling. We grew tired of the slow revision cycles, the upfront payment structures, and the black-box workflow.</p>
-            <p className="mb-6">Reframe Visual was built specifically for eCommerce brands, photographers, and marketing agencies that require absolute precision.</p>
-            
-            <div className="grid grid-cols-2 gap-8 my-16">
-              <div className="border-l-4 border-[#6366F1] pl-6">
-                <div className="text-4xl font-black font-outfit mb-2">10M+</div>
-                <div className="text-[11px] font-bold uppercase tracking-widest text-black/60">Images Processed</div>
-              </div>
-              <div className="border-l-4 border-[#6366F1] pl-6">
-                <div className="text-4xl font-black font-outfit mb-2">99.8%</div>
-                <div className="text-[11px] font-bold uppercase tracking-widest text-black/60">Approval Rate</div>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+             <div className="bg-white border-2 border-black p-8 rounded-3xl shadow-[4px_4px_0px_#121212]">
+                <h3 className="font-outfit font-black text-2xl uppercase mb-4">No AI Magic Wands.</h3>
+                <p className="font-medium text-sm text-black/80">Every single curve, drop shadow, and stray hair is hand-pathed by humans. We strictly use automated technology for routing, QA validation, and tracking, not pixel manipulation.</p>
+             </div>
+             <div className="bg-white border-2 border-black p-8 rounded-3xl shadow-[4px_4px_0px_#121212]">
+                <h3 className="font-outfit font-black text-2xl uppercase mb-4">Zero Compromises.</h3>
+                <p className="font-medium text-sm text-black/80">E-commerce shouldn't mean 'low quality'. We deliver editorial-level frequency separation and vectorization at marketplace-level volumes.</p>
+             </div>
+             <div className="bg-white border-2 border-black p-8 rounded-3xl shadow-[4px_4px_0px_#121212]">
+                <h3 className="font-outfit font-black text-2xl uppercase mb-4">Guaranteed QC.</h3>
+                <p className="font-medium text-sm text-black/80">Our 4-Agent proprietary framework scans the uploaded assets structurally. We offer a 100% refund guarantee if it fails to hit original complexity marks upon review.</p>
+             </div>
           </div>
         </div>
       </main>
