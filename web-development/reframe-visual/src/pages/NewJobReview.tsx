@@ -6,7 +6,7 @@ export const NewJobReview: React.FC = () => {
     <div className="min-h-screen bg-[#F9F9F9] flex flex-col font-inter">
       <Navigation />
       <main className="flex-grow py-12 px-10 md:px-20 lg:px-[10%] xl:px-[12%] pb-32">
-        <div className="mb-12 border-b-2 border-black pb-6">
+        <div className="mb-12 border-b border-black/5 pb-6">
           <div className="flex gap-4 mb-4 text-[10px] font-bold tracking-widest uppercase">
             <span className="text-black/60">Step 1: Done</span>
             <span className="text-black/60">Step 2: Done</span>
@@ -15,8 +15,8 @@ export const NewJobReview: React.FC = () => {
           <h1 className="text-3xl font-outfit font-black tracking-tight uppercase text-black">Order Summary</h1>
         </div>
         
-        <div className="max-w-4xl bg-white border-2 border-black p-8 shadow-[6px_6px_0px_#121212]">
-          <h2 className="text-xl font-outfit font-bold uppercase tracking-tighter mb-8 border-b-2 border-black/10 pb-4">Spring Collection 2026</h2>
+        <div className="max-w-4xl bg-white border border-black/5 rounded-3xl p-8 shadow-[0_20px_40px_rgb(0,0,0,0.06)]">
+          <h2 className="text-xl font-outfit font-bold uppercase tracking-tighter mb-8 border-b border-black/5/10 pb-4">Spring Collection 2026</h2>
           
           <div className="flex justify-between items-end mb-4 border-b border-black/10 pb-4">
             <div>
@@ -45,7 +45,7 @@ export const NewJobReview: React.FC = () => {
         </div>
 
         <div className="fixed bottom-0 left-0 w-full bg-[#121212] border-t-4 border-[#6366F1] py-4 px-10 md:px-20 lg:px-[10%] flex justify-end items-center z-50">
-          <a href="/dashboard" className="bg-[#6366F1] text-white px-8 py-4 text-[11px] font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-colors">Submit Job — Pay After Review</a>
+          <a href="/dashboard" className="bg-[#6366F1] text-white px-8 py-4 text-[11px] rounded-full font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-colors">Submit Job — Pay After Review</a>
         </div>
       </main>
     </div>

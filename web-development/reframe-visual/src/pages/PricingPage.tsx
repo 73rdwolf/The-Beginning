@@ -34,7 +34,7 @@ export const PricingPage: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {bundles.map((bundle, idx) => (
-            <div key={idx} className={`bg-white border-2 border-black p-8 shadow-[6px_6px_0px_#121212] flex flex-col ${idx === 1 ? 'ring-4 ring-[#6366F1]' : ''}`}>
+            <div key={idx} className={`bg-white border border-black/5 rounded-3xl p-8 shadow-[0_20px_40px_rgb(0,0,0,0.06)] flex flex-col ${idx === 1 ? 'ring-2 ring-indigo-500 ring-offset-8 ring-offset-white rounded-3xl' : ''}`}>
               {idx === 1 && <span className="bg-[#6366F1] text-white text-[10px] font-bold tracking-widest uppercase px-3 py-1 self-start mb-4">Most Popular</span>}
               <h3 className="text-2xl font-outfit font-black uppercase tracking-tight mb-6">{bundle.name}</h3>
               
@@ -57,7 +57,7 @@ export const PricingPage: React.FC = () => {
                 ))}
               </ul>
               
-              <button className={`w-full py-4 uppercase text-[11px] font-bold tracking-widest border-2 border-black hover:-translate-y-1 transition-all ${idx === 1 ? 'bg-[#6366F1] text-white shadow-[4px_4px_0px_#121212]' : 'bg-transparent text-black'}`}>
+              <button className={`w-full py-4 uppercase text-[11px] font-bold tracking-widest border border-black/5 rounded-3xl hover:-translate-y-1 transition-all ${idx === 1 ? 'bg-[#6366F1] text-white shadow-[0_8px_30px_rgb(0,0,0,0.04)]' : 'bg-transparent text-black'}`}>
                 Select Package
               </button>
             </div>

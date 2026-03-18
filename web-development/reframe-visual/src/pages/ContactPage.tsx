@@ -15,20 +15,20 @@ export const ContactPage: React.FC = () => {
             <div className="grid grid-cols-2 gap-6">
               <div>
                 <label className="block text-[10px] font-bold uppercase tracking-widest mb-2">First Name</label>
-                <input type="text" className="w-full p-4 border-2 border-black outline-none font-medium focus:border-[#6366F1]" />
+                <input type="text" className="w-full p-4 border border-black/5 rounded-3xl outline-none font-medium focus:border-[#6366F1]" />
               </div>
               <div>
                 <label className="block text-[10px] font-bold uppercase tracking-widest mb-2">Last Name</label>
-                <input type="text" className="w-full p-4 border-2 border-black outline-none font-medium focus:border-[#6366F1]" />
+                <input type="text" className="w-full p-4 border border-black/5 rounded-3xl outline-none font-medium focus:border-[#6366F1]" />
               </div>
             </div>
             <div>
               <label className="block text-[10px] font-bold uppercase tracking-widest mb-2">Company Email</label>
-              <input type="email" className="w-full p-4 border-2 border-black outline-none font-medium focus:border-[#6366F1]" />
+              <input type="email" className="w-full p-4 border border-black/5 rounded-3xl outline-none font-medium focus:border-[#6366F1]" />
             </div>
             <div>
               <label className="block text-[10px] font-bold uppercase tracking-widest mb-2">Monthly Volume (Images)</label>
-              <select className="w-full p-4 border-2 border-black outline-none font-medium text-black focus:border-[#6366F1] bg-white">
+              <select className="w-full p-4 border border-black/5 rounded-3xl outline-none font-medium text-black focus:border-[#6366F1] bg-white">
                 <option>0 - 500</option>
                 <option>500 - 2,000</option>
                 <option>2,000 - 10,000</option>
@@ -37,9 +37,9 @@ export const ContactPage: React.FC = () => {
             </div>
             <div>
               <label className="block text-[10px] font-bold uppercase tracking-widest mb-2">Message</label>
-              <textarea rows={5} className="w-full p-4 border-2 border-black outline-none font-medium focus:border-[#6366F1] resize-none"></textarea>
+              <textarea rows={5} className="w-full p-4 border border-black/5 rounded-3xl outline-none font-medium focus:border-[#6366F1] resize-none"></textarea>
             </div>
-            <button type="button" className="bg-black text-white py-4 uppercase text-[11px] font-bold tracking-[0.15em] border border-black hover:-translate-y-1 shadow-[4px_4px_0px_#6366F1] transition-all self-start px-12">
+            <button type="button" className="bg-black text-white py-4 uppercase text-[11px] font-bold tracking-wider border border-black/5 rounded-3xl hover:-translate-y-1 shadow-[0_8px_30px_rgba(99,102,241,0.15)] transition-all self-start px-12">
               Send Message —
             </button>
           </form>

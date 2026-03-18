@@ -8,7 +8,7 @@ export const FaqPage: React.FC = () => {
       <Navigation />
       <main className="flex-grow py-24 px-10 md:px-20 lg:px-[10%] xl:px-[12%] max-w-4xl">
         <h1 className="text-4xl md:text-5xl font-outfit font-black tracking-tight uppercase text-black mb-16">FAQ</h1>
-        <div className="bg-white border-2 border-black p-8 shadow-[4px_4px_0px_#121212] prose prose-lg text-black/80 font-medium space-y-8">
+        <div className="bg-white border border-black/5 rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] prose prose-lg text-black/80 font-medium space-y-8">
           
           <div>
             <h3 className="text-[#6366F1] font-bold uppercase tracking-tight text-xl mb-2">Do you use AI to edit images?</h3>

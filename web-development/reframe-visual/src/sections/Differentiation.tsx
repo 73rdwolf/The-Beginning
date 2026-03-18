@@ -12,7 +12,7 @@ const comparisons = [
 
 export const Differentiation: React.FC = () => {
   return (
-    <section className="py-24 md:py-32 bg-white border-b border-black">
+    <section className="py-24 md:py-32 bg-white border-b border-black/5">
       <div className="container mx-auto px-6 md:px-20">
         <div className="flex flex-col gap-8 mb-20 max-w-2xl border-l-[3px] border-black pl-8">
           <h2 className="text-5xl md:text-8xl font-outfit font-black text-black leading-none uppercase">

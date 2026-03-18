@@ -14,7 +14,7 @@ const services = [
 
 export const ServicesIndex: React.FC = () => {
   return (
-    <section id="services" className="py-24 md:py-32 bg-white border-b border-black">
+    <section id="services" className="py-24 md:py-32 bg-white border-b border-black/5">
       <div className="container mx-auto px-6 md:px-20 border-l-[3px] border-black pl-8 lg:px-24">
         
         <div className="flex flex-col gap-6 mb-16 md:mb-24 mt-8">
@@ -29,8 +29,8 @@ export const ServicesIndex: React.FC = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((svc, i) => (
-            <div key={i} className="group p-8 rounded-lg border-2 border-black bg-white hover:bg-[#F9F9F9] shadow-[6px_6px_0px_#6366F1] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_#6366F1] duration-200">
-              <div className="w-12 h-12 bg-black rounded-md flex items-center justify-center mb-8 border border-black">
+            <div key={i} className="group p-8 rounded-lg border border-black/5 rounded-3xl bg-white hover:bg-[#F9F9F9] shadow-[0_20px_40px_rgba(99,102,241,0.2)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)] duration-200">
+              <div className="w-12 h-12 bg-black rounded-md flex items-center justify-center mb-8 border border-black/5 rounded-3xl">
                 <svc.icon className="w-5 h-5 text-white" strokeWidth={2.5} />
               </div>
               <h3 className="text-base font-outfit font-black text-black uppercase mb-3 tracking-wide">{svc.name}</h3>
@@ -40,7 +40,7 @@ export const ServicesIndex: React.FC = () => {
         </div>
 
         <div className="mt-20">
-          <a href="/services" className="inline-flex items-center justify-center gap-3 bg-white text-black border-2 border-black rounded-md px-8 py-4 text-[11px] font-black tracking-[0.15em] uppercase hover:bg-black hover:text-white transition-all shadow-[4px_4px_0px_#121212]">
+          <a href="/services" className="inline-flex items-center justify-center gap-3 bg-white text-black border border-black/5 rounded-3xl rounded-md px-8 py-4 text-[11px] rounded-full font-black tracking-wider uppercase hover:bg-black hover:text-white transition-all shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
             Explore All 19 Services <ArrowRight className="w-4 h-4" />
           </a>
         </div>
