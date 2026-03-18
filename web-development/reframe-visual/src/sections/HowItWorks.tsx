@@ -8,21 +8,21 @@ export const HowItWorks: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-white border-b border-black/5">
+    <section className="py-24 md:py-32 bg-white border-b border-black">
       <div className="container mx-auto px-6 md:px-20 flex flex-col items-center">
         <h2 className="text-4xl md:text-6xl font-outfit font-black text-black mb-16 tracking-tight text-center uppercase leading-none border-b-[3px] border-black pb-8 px-8">
           Three steps to <br/>perfect images.
         </h2>
         <div className="grid md:grid-cols-3 gap-8 w-full">
           {steps.map((step, i) => (
-            <div key={i} className="bg-white border border-black/5 rounded-3xl p-8 rounded-md flex flex-col gap-6 shadow-[0_20px_40px_rgb(0,0,0,0.06)] hover:-translate-y-1 hover:shadow-[8px_8px_0px_#6366F1] transition-all">
+            <div key={i} className="bg-white border-2 border-black p-8 rounded-md flex flex-col gap-6 shadow-[6px_6px_0px_#121212] hover:-translate-y-1 hover:shadow-[8px_8px_0px_#6366F1] transition-all">
               <span className="bg-black text-white w-fit px-3 py-1 rounded-sm text-[10px] font-black tracking-widest uppercase">{step.id}</span>
               <h3 className="text-xl font-outfit font-black text-black leading-tight uppercase">{step.title}</h3>
               <p className="text-xs font-bold tracking-wide text-gray-700 leading-relaxed uppercase">{step.desc}</p>
             </div>
           ))}
         </div>
-        <button className="mt-20 bg-black text-white px-10 py-5 rounded-md text-[11px] font-black tracking-wider uppercase border border-black/5 rounded-3xl shadow-[5px_5px_0px_#6366F1] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)] transition-all">
+        <button className="mt-20 bg-black text-white px-10 py-5 rounded-md text-[11px] font-black tracking-[0.15em] uppercase border border-black shadow-[5px_5px_0px_#6366F1] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_#6366F1] transition-all">
            Create a Job —
         </button>
       </div>

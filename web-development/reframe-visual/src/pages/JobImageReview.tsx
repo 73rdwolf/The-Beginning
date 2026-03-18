@@ -11,7 +11,7 @@ export const JobImageReview: React.FC = () => {
         </div>
         <div className="flex items-center gap-4">
           <span className="text-[10px] font-bold uppercase tracking-widest text-[#6366F1]">18 / 42 Ready</span>
-          <a href="/jobs/9482/payment" className="bg-[#6366F1] text-white px-6 py-2 text-[10px] rounded-full font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-colors">
+          <a href="/jobs/9482/payment" className="bg-[#6366F1] text-white px-6 py-2 text-[10px] font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-colors">
             Approve All & Pay
           </a>
         </div>
@@ -24,8 +24,8 @@ export const JobImageReview: React.FC = () => {
             
             {/* Split Screen Placeholder */}
             <div className="w-full max-w-4xl h-[600px] bg-[#1A1A1A] border border-white/10 relative overflow-hidden bg-[url('/grid-pattern-dark.svg')] flex items-center justify-center">
-              <div className="absolute top-4 left-4 bg-gray-50/80 rounded-2xl0 backdrop-blur-md border border-white/20 text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full">Before</div>
-              <div className="absolute top-4 right-4 bg-gray-50/80 rounded-2xl0 backdrop-blur-md border border-white/20 text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full">After — Reframe</div>
+              <div className="absolute top-4 left-4 bg-black/50 backdrop-blur-md border border-white/20 text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full">Before</div>
+              <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md border border-white/20 text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full">After — Reframe</div>
               
               <div className="text-white/20 font-outfit font-black text-4xl uppercase tracking-widest">Image Viewport</div>
               

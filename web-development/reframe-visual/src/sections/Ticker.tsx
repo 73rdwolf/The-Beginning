@@ -16,7 +16,7 @@ export const Ticker: React.FC = () => {
         {[...tickerItems, ...tickerItems, ...tickerItems].map((item, i) => (
           <div key={i} className="flex items-center gap-4 px-12 group last:pr-0">
             <item.icon className="w-4 h-4 text-white opacity-80" strokeWidth={2.5} />
-            <span className="text-[11px] font-black uppercase tracking-wider text-white">
+            <span className="text-[11px] font-black uppercase tracking-[0.15em] text-white">
               {item.text}
             </span>
           </div>

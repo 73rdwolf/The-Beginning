@@ -4,11 +4,11 @@ export const Integrations: React.FC = () => {
   const methods = ["Google Drive", "Dropbox", "Direct Upload", "External Link"];
 
   return (
-    <section className="py-24 md:py-32 bg-white border-b border-black/5">
+    <section className="py-24 md:py-32 bg-white border-b border-black">
       <div className="container mx-auto px-6 md:px-20 grid lg:grid-cols-2 gap-16 lg:gap-32 items-center">
         <div className="grid grid-cols-2 gap-6 order-2 lg:order-1">
           {methods.map((method, i) => (
-            <div key={i} className="h-[80px] flex items-center justify-center border border-black/5 rounded-3xl rounded-md bg-white text-black text-[11px] font-black uppercase tracking-widest hover:bg-[#6366F1] hover:border-[#6366F1] hover:text-white transition-all shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#121212] cursor-pointer">
+            <div key={i} className="h-[80px] flex items-center justify-center border-2 border-black rounded-md bg-white text-black text-[11px] font-black uppercase tracking-widest hover:bg-[#6366F1] hover:border-[#6366F1] hover:text-white transition-all shadow-[4px_4px_0px_#121212] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#121212] cursor-pointer">
               {method}
             </div>
           ))}
@@ -24,7 +24,7 @@ export const Integrations: React.FC = () => {
               <br/>Shopify and Zapier integrations coming soon.
             </p>
           </div>
-          <a href="/about" className="w-fit text-[11px] font-black tracking-wider uppercase text-black hover:text-[#6366F1] hover:underline underline-offset-4 cursor-pointer">
+          <a href="/about" className="w-fit text-[11px] font-black tracking-[0.15em] uppercase text-black hover:text-[#6366F1] hover:underline underline-offset-4 cursor-pointer">
             See how uploads work →
           </a>
         </div>

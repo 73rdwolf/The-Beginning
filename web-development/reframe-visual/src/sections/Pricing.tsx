@@ -9,7 +9,7 @@ const plans = [
 
 export const Pricing: React.FC = () => {
   return (
-    <section id="pricing" className="py-24 md:py-32 bg-white border-b border-black/5">
+    <section id="pricing" className="py-24 md:py-32 bg-white border-b border-black">
       <div className="container mx-auto px-6 md:px-20">
         <div className="flex flex-col gap-6 mb-24 max-w-3xl border-l-[3px] border-black pl-8">
           <h2 className="text-5xl md:text-7xl font-outfit font-black text-black leading-none uppercase">
@@ -22,7 +22,7 @@ export const Pricing: React.FC = () => {
 
         <div className="grid md:grid-cols-3 gap-8 px-2">
           {plans.map((plan, i) => (
-            <div key={i} className={`relative p-10 rounded-xl border-2 ${plan.popular ? 'border-[#6366F1] bg-[#6366F1]/5 shadow-[8px_8px_0px_#6366F1]' : 'border-black bg-white shadow-[0_30px_60px_rgb(0,0,0,0.08)]'} flex flex-col gap-8 transition-transform hover:-translate-y-1`}>
+            <div key={i} className={`relative p-10 rounded-xl border-2 ${plan.popular ? 'border-[#6366F1] bg-[#6366F1]/5 shadow-[8px_8px_0px_#6366F1]' : 'border-black bg-white shadow-[8px_8px_0px_#121212]'} flex flex-col gap-8 transition-transform hover:-translate-y-1`}>
               {plan.popular && <div className="absolute -top-3 right-6 bg-black text-white text-[10px] font-black px-4 py-1.5 rounded-sm uppercase tracking-widest">Most Popular</div>}
               <div>
                 <h3 className="text-lg font-outfit font-black text-black uppercase mb-4 tracking-tight leading-none">{plan.name}</h3>
@@ -39,7 +39,7 @@ export const Pricing: React.FC = () => {
                   </li>
                 ))}
               </ul>
-              <button className={`w-full py-4 rounded-md font-black text-[11px] uppercase tracking-wider transition-all border-2 ${plan.popular ? 'bg-[#6366F1] text-white border-[#6366F1] hover:bg-black hover:border-black' : 'bg-white text-black border-black hover:bg-black hover:text-white'} active:scale-95 duration-200 mt-4`}>
+              <button className={`w-full py-4 rounded-md font-black text-[11px] uppercase tracking-[0.15em] transition-all border-2 ${plan.popular ? 'bg-[#6366F1] text-white border-[#6366F1] hover:bg-black hover:border-black' : 'bg-white text-black border-black hover:bg-black hover:text-white'} active:scale-95 duration-200 mt-4`}>
                 Get Started
               </button>
             </div>

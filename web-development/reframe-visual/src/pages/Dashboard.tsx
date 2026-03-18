@@ -19,12 +19,12 @@ export const Dashboard: React.FC = () => {
       </div>
 
       <main className="flex-grow py-12 px-10 md:px-20 lg:px-[10%] xl:px-[12%]">
-        <div className="flex justify-between items-end mb-12 border-b border-black/5 pb-6">
+        <div className="flex justify-between items-end mb-12 border-b-2 border-black pb-6">
           <div>
             <h1 className="text-3xl font-outfit font-black tracking-tight uppercase text-black">Active Workspace</h1>
             <p className="text-black/60 font-medium mt-1">Agency Account / Shovon Ahmed</p>
           </div>
-          <a href="/jobs/new/services" className="bg-[#6366F1] text-white border border-black/5 rounded-3xl px-6 py-3 text-[10px] rounded-full font-bold tracking-widest uppercase hover:-translate-y-1 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all">
+          <a href="/jobs/new/services" className="bg-[#6366F1] text-white border-2 border-black px-6 py-3 text-[10px] font-bold tracking-widest uppercase hover:-translate-y-1 shadow-[4px_4px_0px_#121212] transition-all">
             + Create New Job
           </a>
         </div>
@@ -32,7 +32,7 @@ export const Dashboard: React.FC = () => {
         <h2 className="text-xl font-outfit font-bold uppercase tracking-tighter mb-6">Current Jobs</h2>
         <div className="grid grid-cols-1 gap-6 mb-16">
           {activeJobs.map((job, idx) => (
-            <div key={idx} className="bg-white border border-black/5 rounded-3xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col md:flex-row justify-between items-center gap-6">
+            <div key={idx} className="bg-white border-2 border-black p-6 shadow-[4px_4px_0px_#121212] flex flex-col md:flex-row justify-between items-center gap-6">
               <div className="flex-grow w-full">
                 <div className="flex items-center gap-3 mb-2">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-black/40">{job.id}</span>
@@ -54,7 +54,7 @@ export const Dashboard: React.FC = () => {
                 </div>
               </div>
 
-              <a href={`/jobs/${job.id}`} className="w-full md:w-auto text-center border border-black/5 rounded-3xl px-6 py-3 text-[10px] rounded-full font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-colors">
+              <a href={`/jobs/${job.id}`} className="w-full md:w-auto text-center border-2 border-black px-6 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-colors">
                 View
               </a>
             </div>
@@ -62,7 +62,7 @@ export const Dashboard: React.FC = () => {
         </div>
 
         <h2 className="text-xl font-outfit font-bold uppercase tracking-tighter mb-6">Recent Activity</h2>
-        <div className="bg-white border border-black/5 rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+        <div className="bg-white border-2 border-black p-8 shadow-[4px_4px_0px_#121212]">
           <div className="text-center text-black/40 py-8 font-medium">No archived jobs to display.</div>
         </div>
 
