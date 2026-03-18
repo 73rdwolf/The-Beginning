@@ -1,39 +1,43 @@
-import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
 
-const faqs = [
-  { q: "How fast can I get my images back?", a: "We offer three guaranteed turnaround options: 24h, 48h, and 72h. Pricing varies based on the speed you select during job creation." },
-  { q: "Do humans or AI do the editing?", a: "Humans do ALL the editing. AI is used exclusively for workflow operations—job routing, QA flagging, progress tracking, and file management. AI does not touch your images." },
-  { q: "What is the 100% refund guarantee?", a: "If you're unsatisfied with the results even after a revision, we'll issue a full refund. No questions asked. We stand by the quality of our human retouchers." },
-  { q: "What file formats do you support?", a: "We support JPG, PNG, and TIFF files up to 50MB each. RAW support is on our post-MVP roadmap." },
-  { q: "Is Reframe for photographers too?", a: "Yes! While built with eCommerce in mind, photographers and agencies use Reframe for specialized retouching and high-volume catalog work." },
+const questions = [
+  { q: "How fast is delivery?", a: "We offer 5 tiers ranging from 12-hour rush delivery to standard 7-day turnaround for massive catalog batching." },
+  { q: "Do you use automated AI tools?", a: "No. Every pixel is hand-pathed by senior retouchers. We use AI only for internal workflow orchestration and QA validation." },
+  { q: "What is the refund policy?", a: "Every service includes 1 free human revision. If we cannot meet the structural complexity requirement, we offer a 100% refund." }
 ];
 
 export const FAQ: React.FC = () => {
-  const [open, setOpen] = useState<number | null>(null);
-
   return (
-    <section className="py-24 md:py-32 bg-white border-b border-black">
-      <div className="container mx-auto px-6 md:px-20 max-w-4xl border-l-[3px] border-black pl-8">
-        <h2 className="text-4xl md:text-6xl font-outfit font-black tracking-tight text-black mb-16 uppercase leading-none">
-          Questions <br/>worth asking.
-        </h2>
+    <section id="faq" className="py-32 px-10 md:px-20 lg:px-[10%] xl:px-[12%] bg-white border-b border-black/5 overflow-hidden">
+      <div className="max-w-4xl mx-auto">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <span className="text-[#6366F1] font-bold tracking-widest uppercase text-[10px] mb-4 block">Information Desk</span>
+          <h2 className="text-4xl md:text-5xl font-outfit font-black uppercase tracking-tight text-black">Common Queries.</h2>
+        </motion.div>
+
         <div className="space-y-6">
-          {faqs.map((faq, i) => (
-            <div key={i} className="border-2 border-black rounded-2xl overflow-hidden shadow-[6px_6px_0px_#121212] bg-white transition-all hover:-translate-y-1">
-              <button 
-                onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between p-6 text-left hover:bg-black hover:text-white transition-colors group"
-              >
-                <span className="text-base font-outfit font-black uppercase tracking-wide group-hover:text-white">{faq.q}</span>
-                {open === i ? <ChevronUp className="w-6 h-6 shrink-0" strokeWidth={3} /> : <ChevronDown className="w-6 h-6 shrink-0" strokeWidth={3} />}
-              </button>
-              {open === i && (
-                <div className="p-6 border-t-2 border-black text-sm font-semibold text-black leading-relaxed bg-[#F8F9FA]">
-                  {faq.a}
-                </div>
-              )}
-            </div>
+          {questions.map((item, i) => (
+            <motion.div 
+              key={i}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="bg-gray-50/50 border border-black/5 p-8 rounded-3xl"
+            >
+              <h3 className="text-lg font-bold uppercase tracking-tight mb-4 flex gap-4">
+                <span className="text-[#6366F1]">Q:</span> {item.q}
+              </h3>
+              <p className="text-black/60 font-medium text-sm leading-relaxed pl-8 border-l-2 border-black/5">
+                {item.a}
+              </p>
+            </motion.div>
           ))}
         </div>
       </div>

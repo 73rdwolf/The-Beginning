@@ -1,24 +1,30 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 export const BottomCTA: React.FC = () => {
   return (
-    <section className="py-32 md:py-48 bg-black border-t border-b border-black relative overflow-hidden">
-      <div className="container mx-auto px-6 md:px-20 relative z-10 flex flex-col items-center text-center">
-        <h2 className="text-5xl md:text-7xl lg:text-[100px] font-outfit font-black tracking-tight mb-8 leading-[0.9] text-white uppercase">
-          Start editing. <br />
-          See the difference.
-        </h2>
-        <p className="text-xs font-bold text-gray-400 max-w-2xl mb-12 uppercase tracking-[0.2em] leading-relaxed">
-          3 free edits. No credit card. Your first real order gets 20% off. 
-          <br/>Experience the Reframe workflow today.
-        </p>
-        <button className="bg-white text-black px-10 py-5 rounded-2xl border-2 border-black text-[12px] font-black tracking-[0.15em] uppercase hover:bg-[#6366F1] hover:border-[#6366F1] hover:text-white transition-all shadow-[6px_6px_0px_#6366F1] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_#F9F9F9]">
-          Start with 3 Free Edits —
-        </button>
-        <p className="mt-12 text-[10px] text-white font-black uppercase tracking-[0.2em] opacity-50 bg-white/10 px-4 py-2 rounded-xl border border-white/20">
-          Your first real order gets 20% off — automatically.
-        </p>
-      </div>
+    <section className="py-32 px-10 md:px-20 lg:px-[10%] xl:px-[12%] bg-[#121212] text-white overflow-hidden text-center relative">
+      <div className="absolute inset-0 bg-[#6366F1]/5 opacity-20 bg-[url('/grid-pattern.svg')]"></div>
+      
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ type: 'spring', damping: 15 }}
+        className="relative z-10"
+      >
+        <h2 className="text-5xl md:text-8xl font-outfit font-black uppercase tracking-tight mb-8">Ready to Scale?</h2>
+        <p className="max-w-2xl mx-auto text-xl font-medium text-white/50 mb-12 italic">/ Join 250+ enterprise brands pushing the speed of pixels.</p>
+        
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <a href="/jobs/new/services" className="bg-[#6366F1] text-white px-10 py-5 rounded-full text-[11px] font-black uppercase tracking-widest shadow-[0_20px_40px_rgba(99,102,241,0.2)] hover:-translate-y-1 transition-all">
+            Get 3 Images Free —
+          </a>
+          <a href="/pricing" className="border border-white/20 text-white px-10 py-5 rounded-full text-[11px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all">
+            View Enterprise Rates
+          </a>
+        </div>
+      </motion.div>
     </section>
   );
 };
