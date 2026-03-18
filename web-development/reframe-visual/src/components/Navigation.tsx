@@ -1,31 +1,63 @@
 import React from 'react';
 import { Menu } from 'lucide-react';
+import { Link, NavLink } from 'react-router-dom';
 
 export const Navigation: React.FC = () => {
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-black px-8 md:px-16 lg:px-[5%] py-4 flex items-center justify-between text-black">
-      <div className="flex items-center gap-4">
-        <div className="text-2xl md:text-3xl font-outfit font-black tracking-tight uppercase">Reframe</div>
-        <div className="hidden md:block text-[12px] font-bold tracking-[0.2em] text-gray-400 uppercase mt-1">
-          |&nbsp;&nbsp;&nbsp;&nbsp;Elevating every visual
+    <header className="sticky top-0 z-50 border-b border-black/8 bg-white/78 backdrop-blur-xl">
+      <div className="page-wrap flex items-center justify-between py-4 text-black">
+        <div className="flex items-center gap-4">
+          <Link to="/" className="text-2xl font-outfit font-black uppercase tracking-tight md:text-3xl">
+            Reframe
+          </Link>
+          <div className="mt-1 hidden text-[10px] font-bold uppercase tracking-[0.2em] text-black/34 md:block">
+            |&nbsp;&nbsp;&nbsp;&nbsp;Elevating every visual
+          </div>
         </div>
-      </div>
-      
-      <nav className="hidden lg:flex items-center gap-12">
-        <a href="/services" className="text-[13.5px] font-bold tracking-widest text-black/60 hover:text-black transition-all duration-300 ease-out uppercase">Services</a>
-        <a href="/pricing" className="text-[13.5px] font-bold tracking-widest text-black/60 hover:text-black transition-all duration-300 ease-out uppercase">Pricing</a>
-        <a href="/about" className="text-[13.5px] font-bold tracking-widest text-black/60 hover:text-black transition-all duration-300 ease-out uppercase">About</a>
-      </nav>
 
-      <div className="flex items-center gap-8">
-        <button onClick={() => window.location.href='/login'} className="hidden md:flex items-center gap-2 text-[13.5px] font-bold tracking-widest text-black/60 hover:text-black uppercase transition-all duration-300 ease-out">
-          Login
-        </button>
-        <button onClick={() => window.location.href='/jobs/new/services'} className="bg-black text-white px-8 py-4 rounded-2xl text-[12px] font-bold tracking-widest uppercase hover:-translate-y-0.5 shadow-[0_8px_30px_rgba(124,58,237,0.06)] hover:shadow-[0_16px_40px_rgba(124,58,237,0.15)] transition-all duration-300 ease-out">
-          Start for Free —
-        </button>
-        <div className="lg:hidden p-2">
-          <Menu className="w-6 h-6" />
+        <nav className="hidden items-center gap-3 rounded-full border border-black/8 bg-white/76 p-2 shadow-[0_18px_45px_rgba(18,18,18,0.06)] lg:flex">
+          <NavLink
+            to="/services"
+            className={({ isActive }) =>
+              `rounded-full px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em] ${
+                isActive ? 'bg-black text-white' : 'text-black/60 hover:bg-black/5 hover:text-black'
+              }`
+            }
+          >
+            Services
+          </NavLink>
+          <NavLink
+            to="/pricing"
+            className={({ isActive }) =>
+              `rounded-full px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em] ${
+                isActive ? 'bg-black text-white' : 'text-black/60 hover:bg-black/5 hover:text-black'
+              }`
+            }
+          >
+            Pricing
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `rounded-full px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em] ${
+                isActive ? 'bg-black text-white' : 'text-black/60 hover:bg-black/5 hover:text-black'
+              }`
+            }
+          >
+            About
+          </NavLink>
+        </nav>
+
+        <div className="flex items-center gap-3">
+          <Link to="/login" className="hidden rounded-full px-5 py-3 text-[11px] font-bold uppercase tracking-[0.16em] text-black/64 hover:bg-black/5 hover:text-black md:inline-flex">
+            Login
+          </Link>
+          <Link to="/jobs/new/services" className="cta-primary px-6 py-3 text-[10px] font-bold uppercase tracking-[0.16em]">
+            Start for Free â€”
+          </Link>
+          <button type="button" className="inline-flex rounded-full border border-black/10 bg-white/82 p-3 text-black lg:hidden">
+            <Menu className="h-5 w-5" />
+          </button>
         </div>
       </div>
     </header>

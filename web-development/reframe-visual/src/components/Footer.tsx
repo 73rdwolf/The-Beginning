@@ -1,52 +1,81 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-white border-t-4 border-black py-24 px-6 md:px-20 font-inter">
-      <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 mb-16 pb-12 border-b-2 border-black">
-          <div className="flex flex-col gap-10 max-w-lg">
-            <h2 className="text-4xl sm:text-5xl font-outfit font-black tracking-tight text-black leading-[1.1] uppercase">
+    <footer className="border-t border-black/10 bg-[linear-gradient(180deg,_rgba(255,255,255,0.88)_0%,_rgba(242,244,255,0.96)_100%)] py-24">
+      <div className="page-wrap">
+        <div className="surface-card-strong grid gap-16 p-8 md:p-12 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="flex max-w-xl flex-col gap-8">
+            <div className="inline-flex w-fit rounded-full border border-black bg-white px-4 py-2 text-[10px] font-black uppercase tracking-[0.18em] shadow-[4px_4px_0px_#121212]">
+              AI runs the workflow. Humans do the editing.
+            </div>
+            <h2 className="text-4xl font-outfit font-black uppercase leading-[1.02] tracking-tight text-black sm:text-5xl">
               Built for brands that take their visuals seriously.
             </h2>
-            <p className="text-[15px] font-bold tracking-widest text-[#6366F1] uppercase">
-              AI runs the workflow. Humans do the editing.
-            </p>
-            <button className="w-fit bg-black text-white px-8 py-4 rounded-2xl text-[13.5px] font-black tracking-[0.15em] uppercase border border-black shadow-[4px_4px_0px_#6366F1] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#6366F1] transition-all">
-              Start for Free —
-            </button>
+            <Link to="/jobs/new/services" className="cta-primary w-fit px-8 py-4 text-[11px] font-black uppercase tracking-[0.16em]">
+              Start for Free â€”
+            </Link>
           </div>
-          
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-12">
+
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
             <div className="flex flex-col gap-4">
-              <h4 className="text-2xl font-outfit font-black text-black uppercase">Reframe</h4>
-              <p className="text-[13px] font-semibold text-black uppercase tracking-wider">AI runs the workflow.</p>
-              <p className="text-[13px] font-semibold text-black uppercase tracking-wider">Humans do the editing.</p>
-              <p className="text-[13px] font-bold text-[#6366F1] uppercase mt-2 border-t border-black pt-4">Since 2024.</p>
+              <h4 className="text-2xl font-outfit font-black uppercase text-black">Reframe</h4>
+              <p className="text-xs font-semibold uppercase tracking-wider text-black/72">AI runs the workflow.</p>
+              <p className="text-xs font-semibold uppercase tracking-wider text-black/72">Humans do the editing.</p>
+              <p className="border-t border-black/10 pt-4 text-xs font-bold uppercase text-[#6366F1]">Since 2024.</p>
             </div>
+
             <div className="flex flex-col gap-5">
-              <h4 className="text-[12px] font-black text-black uppercase tracking-[0.2em] mb-2 border-b border-black pb-2">Quick Links</h4>
-              <a href="/services" className="text-[13.5px] font-bold text-black uppercase hover:text-[#6366F1] tracking-wider transition-colors">Services</a>
-              <a href="/pricing" className="text-[13.5px] font-bold text-black uppercase hover:text-[#6366F1] tracking-wider transition-colors">Pricing</a>
-              <a href="/about" className="text-[13.5px] font-bold text-black uppercase hover:text-[#6366F1] tracking-wider transition-colors">How It Works</a>
-              <a href="/faq" className="text-[13.5px] font-bold text-black uppercase hover:text-[#6366F1] tracking-wider transition-colors">FAQ</a>
+              <h4 className="border-b border-black/10 pb-2 text-[10px] font-black uppercase tracking-[0.2em] text-black/60">
+                Quick Links
+              </h4>
+              <Link to="/services" className="text-[11px] font-bold uppercase tracking-[0.16em] text-black/72 hover:text-[#6366F1]">
+                Services
+              </Link>
+              <Link to="/pricing" className="text-[11px] font-bold uppercase tracking-[0.16em] text-black/72 hover:text-[#6366F1]">
+                Pricing
+              </Link>
+              <Link to="/about" className="text-[11px] font-bold uppercase tracking-[0.16em] text-black/72 hover:text-[#6366F1]">
+                How It Works
+              </Link>
+              <Link to="/faq" className="text-[11px] font-bold uppercase tracking-[0.16em] text-black/72 hover:text-[#6366F1]">
+                FAQ
+              </Link>
             </div>
-            <div className="flex flex-col gap-5 mt-8 lg:mt-0">
-              <h4 className="text-[12px] font-black text-black uppercase tracking-[0.2em] mb-2 border-b border-black pb-2">All Pages</h4>
-              <a href="/about" className="text-[13.5px] font-bold text-black uppercase hover:text-[#6366F1] tracking-wider transition-colors">About</a>
-              <a href="/insights" className="text-[13.5px] font-bold text-black uppercase hover:text-[#6366F1] tracking-wider transition-colors">Insights</a>
-              <a href="/contact" className="text-[13.5px] font-bold text-black uppercase hover:text-[#6366F1] tracking-wider transition-colors">Contact</a>
-              <a href="/privacy" className="text-[13.5px] font-bold text-black uppercase hover:text-[#6366F1] tracking-wider transition-colors">Privacy Policy</a>
+
+            <div className="flex flex-col gap-5">
+              <h4 className="border-b border-black/10 pb-2 text-[10px] font-black uppercase tracking-[0.2em] text-black/60">
+                All Pages
+              </h4>
+              <Link to="/about" className="text-[11px] font-bold uppercase tracking-[0.16em] text-black/72 hover:text-[#6366F1]">
+                About
+              </Link>
+              <Link to="/insights" className="text-[11px] font-bold uppercase tracking-[0.16em] text-black/72 hover:text-[#6366F1]">
+                Insights
+              </Link>
+              <Link to="/contact" className="text-[11px] font-bold uppercase tracking-[0.16em] text-black/72 hover:text-[#6366F1]">
+                Contact
+              </Link>
+              <Link to="/privacy" className="text-[11px] font-bold uppercase tracking-[0.16em] text-black/72 hover:text-[#6366F1]">
+                Privacy Policy
+              </Link>
             </div>
           </div>
         </div>
-        
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-[12px] font-bold text-black uppercase tracking-widest">
-          <p>© 2024 REFRAME. ALL RIGHTS RESERVED.</p>
+
+        <div className="mt-8 flex flex-col items-center justify-between gap-4 px-2 text-[10px] font-bold uppercase tracking-[0.18em] text-black/52 md:flex-row">
+          <p>Â© 2024 REFRAME. ALL RIGHTS RESERVED.</p>
           <div className="flex gap-6">
-            <a href="/privacy" className="hover:text-[#6366F1] transition-colors">PRIVACY</a>
-            <a href="/terms" className="hover:text-[#6366F1] transition-colors">TERMS</a>
-            <a href="/contact" className="hover:text-[#6366F1] transition-colors">CONTACT</a>
+            <Link to="/privacy" className="hover:text-[#6366F1]">
+              PRIVACY
+            </Link>
+            <Link to="/terms" className="hover:text-[#6366F1]">
+              TERMS
+            </Link>
+            <Link to="/contact" className="hover:text-[#6366F1]">
+              CONTACT
+            </Link>
           </div>
         </div>
       </div>
