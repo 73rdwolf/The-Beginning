@@ -17,7 +17,7 @@ export const FAQ: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-[#6366F1] font-bold tracking-widest uppercase text-[10px] mb-4 block">Information Desk</span>
+          <span className="text-[#6366F1] font-bold tracking-widest uppercase text-[12px] mb-4 block">Information Desk</span>
           <h2 className="text-4xl md:text-5xl font-outfit font-black uppercase tracking-tight text-black">Common Queries.</h2>
         </motion.div>
 
@@ -34,7 +34,7 @@ export const FAQ: React.FC = () => {
               <h3 className="text-lg font-bold uppercase tracking-tight mb-4 flex gap-4">
                 <span className="text-[#6366F1]">Q:</span> {item.q}
               </h3>
-              <p className="text-black/60 font-medium text-sm leading-relaxed pl-8 border-l-2 border-black/5">
+              <p className="text-black/60 font-medium text-[15px] leading-relaxed pl-8 border-l-2 border-black/5">
                 {item.a}
               </p>
             </motion.div>

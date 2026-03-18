@@ -30,7 +30,7 @@ export const SocialProof: React.FC = () => {
               className="bg-white border border-black/5 p-8 rounded-3xl flex flex-col items-start gap-4 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:-translate-y-2 hover:shadow-[0_20px_40px_rgb(0,0,0,0.06)] transition-all duration-300"
             >
               <div className="text-6xl font-outfit font-black text-black tracking-tighter">{stat.num}</div>
-              <div className="text-[11px] font-bold text-black uppercase tracking-widest leading-relaxed opacity-60">{stat.desc}</div>
+              <div className="text-[13.5px] font-bold text-black uppercase tracking-widest leading-relaxed opacity-60">{stat.desc}</div>
             </motion.div>
           ))}
         </div>

@@ -6,12 +6,12 @@ export const JobImageReview: React.FC = () => {
     <div className="min-h-screen bg-[#121212] flex flex-col font-inter text-white">
       <div className="px-6 py-4 flex justify-between items-center bg-[#0A0A0A] border-b border-white/10">
         <div>
-          <span className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-1 block">Review</span>
+          <span className="text-[12px] font-bold uppercase tracking-widest text-white/40 mb-1 block">Review</span>
           <h1 className="text-xl font-outfit font-bold tracking-tight uppercase">Spring Collection 2026</h1>
         </div>
         <div className="flex items-center gap-4">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-[#6366F1]">18 / 42 Ready</span>
-          <a href="/jobs/9482/payment" className="bg-[#6366F1] text-white px-6 py-2 text-[10px] rounded-full font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-colors">
+          <span className="text-[12px] font-bold uppercase tracking-widest text-[#6366F1]">18 / 42 Ready</span>
+          <a href="/jobs/9482/payment" className="bg-[#6366F1] text-white px-6 py-2 text-[12px] rounded-full font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-colors">
             Approve All & Pay
           </a>
         </div>
@@ -24,8 +24,8 @@ export const JobImageReview: React.FC = () => {
             
             {/* Split Screen Placeholder */}
             <div className="w-full max-w-4xl h-[600px] bg-[#1A1A1A] border border-white/10 relative overflow-hidden bg-[url('/grid-pattern-dark.svg')] flex items-center justify-center">
-              <div className="absolute top-4 left-4 bg-black/50 backdrop-blur-md border border-white/20 text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full">Before</div>
-              <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md border border-white/20 text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full">After — Reframe</div>
+              <div className="absolute top-4 left-4 bg-black/50 backdrop-blur-md border border-white/20 text-[12px] font-bold uppercase tracking-widest px-4 py-2 rounded-full">Before</div>
+              <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md border border-white/20 text-[12px] font-bold uppercase tracking-widest px-4 py-2 rounded-full">After — Reframe</div>
               
               <div className="text-white/20 font-outfit font-black text-4xl uppercase tracking-widest">Image Viewport</div>
               
@@ -50,16 +50,16 @@ export const JobImageReview: React.FC = () => {
         {/* Sidebar Tools */}
         <div className="w-80 bg-[#0A0A0A] border-l border-white/10 flex flex-col">
           <div className="p-6 flex-grow">
-            <h3 className="text-[10px] font-bold uppercase tracking-widest text-white/50 mb-6 border-b border-white/10 pb-2">Review Actions</h3>
+            <h3 className="text-[12px] font-bold uppercase tracking-widest text-white/50 mb-6 border-b border-white/10 pb-2">Review Actions</h3>
             
-            <button className="w-full bg-[#6366F1] text-white py-4 text-[11px] font-bold tracking-widest uppercase mb-4 hover:bg-white hover:text-black transition-colors">
+            <button className="w-full bg-[#6366F1] text-white py-4 text-[13.5px] font-bold tracking-widest uppercase mb-4 hover:bg-white hover:text-black transition-colors">
               Approve Image
             </button>
-            <button className="w-full bg-transparent text-white border border-white/30 py-4 text-[11px] font-bold tracking-widest uppercase mb-8 hover:bg-white/10 transition-colors">
+            <button className="w-full bg-transparent text-white border border-white/30 py-4 text-[13.5px] font-bold tracking-widest uppercase mb-8 hover:bg-white/10 transition-colors">
               Request Revision
             </button>
             
-            <h3 className="text-[10px] font-bold uppercase tracking-widest text-white/50 mb-4 border-b border-white/10 pb-2">Annotation Tools</h3>
+            <h3 className="text-[12px] font-bold uppercase tracking-widest text-white/50 mb-4 border-b border-white/10 pb-2">Annotation Tools</h3>
             <div className="flex gap-2">
               <button className="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-white/10">◯</button>
               <button className="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-white/10">↖</button>

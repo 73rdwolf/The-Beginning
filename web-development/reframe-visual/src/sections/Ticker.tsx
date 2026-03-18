@@ -22,7 +22,7 @@ export const Ticker: React.FC = () => {
         <div className="flex px-4">
           {tags.map((tag, idx) => (
             <div key={idx} className="flex items-center text-white mr-12 whitespace-nowrap">
-              <span className="font-outfit font-black uppercase text-xs tracking-widest">{tag}</span>
+              <span className="font-outfit font-black uppercase text-[13px] tracking-widest">{tag}</span>
               <span className="ml-12 text-white/40 font-bold">•</span>
             </div>
           ))}
@@ -30,7 +30,7 @@ export const Ticker: React.FC = () => {
         <div className="flex px-4">
           {tags.map((tag, idx) => (
             <div key={'dup'+idx} className="flex items-center text-white mr-12 whitespace-nowrap">
-              <span className="font-outfit font-black uppercase text-xs tracking-widest">{tag}</span>
+              <span className="font-outfit font-black uppercase text-[13px] tracking-widest">{tag}</span>
               <span className="ml-12 text-white/40 font-bold">•</span>
             </div>
           ))}

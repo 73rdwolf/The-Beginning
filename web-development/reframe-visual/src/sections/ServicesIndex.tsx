@@ -21,7 +21,7 @@ export const ServicesIndex: React.FC = () => {
         className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8"
       >
         <div>
-          <span className="text-[#6366F1] font-bold tracking-widest uppercase text-[10px] mb-4 block">The Arsenal</span>
+          <span className="text-[#6366F1] font-bold tracking-widest uppercase text-[12px] mb-4 block">The Arsenal</span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-outfit font-black uppercase tracking-tight text-black">
             Pixel-Perfect <br />
             Scalability.
@@ -63,10 +63,10 @@ export const ServicesIndex: React.FC = () => {
             </div>
             
             <div className="border-t border-black/5 pt-6">
-              <p className="text-black/60 text-sm font-medium mb-4">{svc.desc}</p>
+              <p className="text-black/60 text-[15px] font-medium mb-4">{svc.desc}</p>
               <div className="flex justify-between items-end">
                 <div className="font-outfit font-black text-xl">{svc.price}</div>
-                <span className="text-[10px] uppercase font-bold tracking-widest text-[#6366F1]">Review Complexities</span>
+                <span className="text-[12px] uppercase font-bold tracking-widest text-[#6366F1]">Review Complexities</span>
               </div>
             </div>
           </motion.a>
@@ -80,7 +80,7 @@ export const ServicesIndex: React.FC = () => {
         transition={{ delay: 0.4 }}
         className="mt-16 flex justify-center"
       >
-        <a href="/services" className="inline-flex items-center justify-center gap-3 bg-black text-white px-8 py-4 rounded-full text-[11px] font-bold tracking-wider uppercase hover:-translate-y-1 shadow-[0_8px_30px_rgb(0,0,0,0.06)] transition-all">
+        <a href="/services" className="inline-flex items-center justify-center gap-3 bg-black text-white px-8 py-4 rounded-full text-[13.5px] font-bold tracking-wider uppercase hover:-translate-y-1 shadow-[0_8px_30px_rgb(0,0,0,0.06)] transition-all">
           Explore All 19 Services —
         </a>
       </motion.div>

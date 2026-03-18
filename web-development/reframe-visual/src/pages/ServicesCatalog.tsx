@@ -24,7 +24,7 @@ export const ServicesCatalog: React.FC = () => {
       <main className="flex-grow py-24 px-10 md:px-20 lg:px-[10%] xl:px-[12%]">
         <div className="flex justify-between items-end mb-4">
           <h1 className="text-4xl md:text-5xl font-outfit font-black tracking-tight uppercase text-black">Service Catalog</h1>
-          <span className="bg-[#6366F1] text-white px-3 py-1 font-bold tracking-widest uppercase text-[10px]">Updated Pricing v2.1</span>
+          <span className="bg-[#6366F1] text-white px-3 py-1 font-bold tracking-widest uppercase text-[12px]">Updated Pricing v2.1</span>
         </div>
         <p className="text-black/60 font-medium max-w-2xl mb-16">All 19 core, retouching, and specialized services. Featuring 5 Turnaround Speeds from 12h (Rush) down to 7 Days.</p>
         
@@ -36,12 +36,12 @@ export const ServicesCatalog: React.FC = () => {
                 <a href={`/services/${svc.name.toLowerCase().replace(/\s+/g, '-').replace(/\(.*\)/g, '').trim()}`} key={sIdx} className="bg-white border-2 border-black p-8 rounded-3xl shadow-[4px_4px_0px_#121212] hover:-translate-y-1 hover:shadow-[8px_8px_0px_#121212] transition-all flex flex-col group cursor-pointer block">
                   <div className="flex flex-col mb-4">
                     <h3 className="text-lg font-bold uppercase tracking-tight mb-2">{svc.name}</h3>
-                    <span className="bg-black/5 text-[#121212] text-[9px] uppercase font-bold tracking-tight px-2 py-1 self-start">{svc.time}</span>
+                    <span className="bg-black/5 text-[#121212] text-[13.5px] uppercase font-bold tracking-tight px-2 py-1 self-start">{svc.time}</span>
                   </div>
-                  <p className="text-black/70 text-sm font-medium mb-8 flex-grow">{svc.desc}</p>
+                  <p className="text-black/70 text-[15px] font-medium mb-8 flex-grow">{svc.desc}</p>
                   <div className="flex justify-between items-center border-t-2 border-black/10 pt-4 mt-auto">
-                    <div className="text-xl font-black font-outfit">{svc.price} <span className="text-[10px] text-black/50 font-medium">/ IMG</span></div>
-                    <span className="text-[10px] uppercase font-bold tracking-widest text-black/50 group-hover:text-[#6366F1] transition-colors">Deep Dive —</span>
+                    <div className="text-xl font-black font-outfit">{svc.price} <span className="text-[12px] text-black/50 font-medium">/ IMG</span></div>
+                    <span className="text-[12px] uppercase font-bold tracking-widest text-black/50 group-hover:text-[#6366F1] transition-colors">Deep Dive —</span>
                   </div>
                 </a>
               ))}

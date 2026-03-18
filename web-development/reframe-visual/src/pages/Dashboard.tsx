@@ -13,9 +13,9 @@ export const Dashboard: React.FC = () => {
       
       {/* Platform Sub-Nav */}
       <div className="bg-[#121212] text-white px-10 md:px-20 lg:px-[10%] xl:px-[12%] py-4 flex gap-8 border-b-4 border-[#6366F1]">
-        <a href="/dashboard" className="text-[11px] font-bold uppercase tracking-widest hover:text-[#6366F1] transition-colors">Overview</a>
-        <a href="/jobs/new/services" className="text-[11px] font-bold uppercase tracking-widest text-white/50 hover:text-white transition-colors">Start Job</a>
-        <a href="/account" className="text-[11px] font-bold uppercase tracking-widest text-white/50 hover:text-white transition-colors">Account & Billing</a>
+        <a href="/dashboard" className="text-[13.5px] font-bold uppercase tracking-widest hover:text-[#6366F1] transition-colors">Overview</a>
+        <a href="/jobs/new/services" className="text-[13.5px] font-bold uppercase tracking-widest text-white/50 hover:text-white transition-colors">Start Job</a>
+        <a href="/account" className="text-[13.5px] font-bold uppercase tracking-widest text-white/50 hover:text-white transition-colors">Account & Billing</a>
       </div>
 
       <main className="flex-grow py-12 px-10 md:px-20 lg:px-[10%] xl:px-[12%]">
@@ -24,7 +24,7 @@ export const Dashboard: React.FC = () => {
             <h1 className="text-3xl font-outfit font-black tracking-tight uppercase text-black">Active Workspace</h1>
             <p className="text-black/60 font-medium mt-1">Agency Account / Shovon Ahmed</p>
           </div>
-          <a href="/jobs/new/services" className="bg-[#6366F1] text-white border-2 border-black px-6 py-3 rounded-2xl text-[10px] font-bold tracking-widest uppercase hover:-translate-y-1 shadow-[4px_4px_0px_#121212] transition-all">
+          <a href="/jobs/new/services" className="bg-[#6366F1] text-white border-2 border-black px-6 py-3 rounded-2xl text-[12px] font-bold tracking-widest uppercase hover:-translate-y-1 shadow-[4px_4px_0px_#121212] transition-all">
             + Create New Job
           </a>
         </div>
@@ -35,10 +35,10 @@ export const Dashboard: React.FC = () => {
             <div key={idx} className="bg-white border-2 border-black p-6 rounded-3xl shadow-[4px_4px_0px_#121212] flex flex-col md:flex-row justify-between items-center gap-6">
               <div className="flex-grow w-full">
                 <div className="flex items-center gap-3 mb-2">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-black/40">{job.id}</span>
+                  <span className="text-[12px] font-bold uppercase tracking-widest text-black/40">{job.id}</span>
                   <h3 className="text-lg font-bold tracking-tight uppercase">{job.name}</h3>
                 </div>
-                <div className="flex items-center gap-8 text-sm font-medium text-black/70">
+                <div className="flex items-center gap-8 text-[15px] font-medium text-black/70">
                   <span>{job.images} Images</span>
                   <span>Due: {job.due}</span>
                 </div>
@@ -46,15 +46,15 @@ export const Dashboard: React.FC = () => {
               
               <div className="w-full md:w-64">
                 <div className="flex justify-between items-end mb-2">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#6366F1]">{job.status}</span>
-                  <span className="text-[10px] font-bold tracking-widest">{job.progress}</span>
+                  <span className="text-[12px] font-bold uppercase tracking-widest text-[#6366F1]">{job.status}</span>
+                  <span className="text-[12px] font-bold tracking-widest">{job.progress}</span>
                 </div>
                 <div className="w-full h-2 bg-black/10 rounded-full overflow-hidden">
                   <div className="h-full bg-[#6366F1]" style={{ width: job.progress }}></div>
                 </div>
               </div>
 
-              <a href={`/jobs/${job.id}`} className="w-full md:w-auto text-center border-2 border-black px-6 py-3 rounded-2xl text-[10px] font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-colors">
+              <a href={`/jobs/${job.id}`} className="w-full md:w-auto text-center border-2 border-black px-6 py-3 rounded-2xl text-[12px] font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-colors">
                 View
               </a>
             </div>

@@ -16,7 +16,7 @@ export const HowItWorks: React.FC = () => {
         viewport={{ once: true }}
         className="mb-20"
       >
-        <span className="text-[#6366F1] font-bold tracking-widest uppercase text-[10px] mb-4 block">The Pipeline</span>
+        <span className="text-[#6366F1] font-bold tracking-widest uppercase text-[12px] mb-4 block">The Pipeline</span>
         <h2 className="text-4xl md:text-5xl font-outfit font-black uppercase tracking-tight">The Frictionless <br/> Workflow.</h2>
       </motion.div>
 

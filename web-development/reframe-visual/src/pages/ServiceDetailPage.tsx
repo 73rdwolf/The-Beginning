@@ -35,16 +35,16 @@ export const ServiceDetailPage: React.FC = () => {
         <section className="bg-white border-b-2 border-black py-24 px-10 md:px-20 lg:px-[10%]">
           <div className="flex flex-col md:flex-row gap-16 items-center">
             <div className="flex-1">
-               <span className="bg-black text-white px-3 py-1 text-[10px] font-bold tracking-widest uppercase rounded-full mb-6 inline-block">Service Deep Dive</span>
+               <span className="bg-black text-white px-3 py-1 text-[12px] font-bold tracking-widest uppercase rounded-full mb-6 inline-block">Service Deep Dive</span>
                <h1 className="text-5xl md:text-6xl lg:text-7xl font-outfit font-black uppercase tracking-tight text-black leading-none mb-6">{service.title}</h1>
                <h2 className="text-xl md:text-2xl font-bold italic text-[#6366F1] mb-8">{service.tagline}</h2>
                <p className="text-black/70 font-medium text-lg max-w-xl mb-10 leading-relaxed">{service.desc}</p>
                <div className="flex gap-4">
-                 <a href="/jobs/new/services" className="bg-[#6366F1] text-white px-8 py-4 rounded-full text-[11px] font-bold tracking-widest uppercase hover:-translate-y-1 shadow-[4px_4px_0px_#121212] transition-transform">Start Job Now —</a>
+                 <a href="/jobs/new/services" className="bg-[#6366F1] text-white px-8 py-4 rounded-full text-[13.5px] font-bold tracking-widest uppercase hover:-translate-y-1 shadow-[4px_4px_0px_#121212] transition-transform">Start Job Now —</a>
                </div>
             </div>
             <div className="flex-1 w-full bg-[#121212] rounded-3xl min-h-[400px] border-2 border-black p-8 flex text-center items-center justify-center relative shadow-[6px_6px_0px_#121212]">
-               <span className="bg-white border-2 border-black shadow-[4px_4px_0px_#121212] text-black font-black uppercase tracking-widest text-[10px] px-6 py-3 rounded-full relative z-10 transition-transform hover:scale-105 cursor-pointer">Interactive {service.title} Before/After</span>
+               <span className="bg-white border-2 border-black shadow-[4px_4px_0px_#121212] text-black font-black uppercase tracking-widest text-[12px] px-6 py-3 rounded-full relative z-10 transition-transform hover:scale-105 cursor-pointer">Interactive {service.title} Before/After</span>
             </div>
           </div>
         </section>
@@ -55,7 +55,7 @@ export const ServiceDetailPage: React.FC = () => {
              <ul className="space-y-4">
                {service.features.map((f:string, i:number) => (
                  <li key={i} className="flex gap-4 items-center bg-white p-6 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#121212]">
-                    <span className="bg-[#6366F1] text-white w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold font-outfit">{i + 1}</span>
+                    <span className="bg-[#6366F1] text-white w-8 h-8 rounded-full flex items-center justify-center text-[13px] font-bold font-outfit">{i + 1}</span>
                     <span className="font-bold text-black">{f}</span>
                  </li>
                ))}
@@ -65,11 +65,11 @@ export const ServiceDetailPage: React.FC = () => {
              <h3 className="text-3xl font-outfit font-black uppercase tracking-tight mb-8">Service Detail Matrices</h3>
              <div className="bg-white rounded-2xl border-2 border-black shadow-[6px_6px_0px_#121212] overflow-hidden">
                 <table className="w-full text-left">
-                  <thead><tr className="bg-black text-white uppercase tracking-widest text-[10px] font-bold"><th className="p-6">Speed Option</th><th className="p-6">Simple Tier</th><th className="p-6">Complex Tier</th></tr></thead>
+                  <thead><tr className="bg-black text-white uppercase tracking-widest text-[12px] font-bold"><th className="p-6">Speed Option</th><th className="p-6">Simple Tier</th><th className="p-6">Complex Tier</th></tr></thead>
                   <tbody>
                     {service.pricing.map((t:any, i:number) => (
                       <tr key={i} className="border-b-2 border-black hover:bg-black/5">
-                        <td className="p-6 font-bold text-[11px] tracking-widest uppercase">{t.speed}</td>
+                        <td className="p-6 font-bold text-[13.5px] tracking-widest uppercase">{t.speed}</td>
                         <td className="p-6 font-black font-outfit text-xl">{t.simple}</td>
                         <td className="p-6 font-black font-outfit text-[#6366F1]">{t.complex}</td>
                       </tr>

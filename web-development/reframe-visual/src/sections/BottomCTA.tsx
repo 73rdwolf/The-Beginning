@@ -17,10 +17,10 @@ export const BottomCTA: React.FC = () => {
         <p className="max-w-2xl mx-auto text-xl font-medium text-white/50 mb-12 italic">/ Join 250+ enterprise brands pushing the speed of pixels.</p>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <a href="/jobs/new/services" className="bg-[#6366F1] text-white px-10 py-5 rounded-full text-[11px] font-black uppercase tracking-widest shadow-[0_20px_40px_rgba(99,102,241,0.2)] hover:-translate-y-1 transition-all">
+          <a href="/jobs/new/services" className="bg-[#6366F1] text-white px-10 py-5 rounded-full text-[13.5px] font-black uppercase tracking-widest shadow-[0_20px_40px_rgba(99,102,241,0.2)] hover:-translate-y-1 transition-all">
             Get 3 Images Free —
           </a>
-          <a href="/pricing" className="border border-white/20 text-white px-10 py-5 rounded-full text-[11px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all">
+          <a href="/pricing" className="border border-white/20 text-white px-10 py-5 rounded-full text-[13.5px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all">
             View Enterprise Rates
           </a>
         </div>

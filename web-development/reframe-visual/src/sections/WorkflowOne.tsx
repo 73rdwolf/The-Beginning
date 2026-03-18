@@ -10,7 +10,7 @@ export const WorkflowOne: React.FC = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
         >
-          <span className="text-[#6366F1] font-bold tracking-widest uppercase text-[10px] mb-6 block">Phase 01 — Logistics</span>
+          <span className="text-[#6366F1] font-bold tracking-widest uppercase text-[12px] mb-6 block">Phase 01 — Logistics</span>
           <h2 className="text-5xl md:text-7xl font-outfit font-black tracking-tight text-black uppercase leading-[0.9] mb-10">
             Frictionless <br />Asset Ingestion.
           </h2>
@@ -19,7 +19,7 @@ export const WorkflowOne: React.FC = () => {
                <div className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-outfit font-black flex-shrink-0 shadow-lg">1</div>
                <p className="text-lg font-medium text-black/70 italic leading-relaxed">"Drop 10 images or 10,000. Our pipeline handles the extraction metadata automatically."</p>
             </div>
-            <p className="text-sm font-medium text-black/50 leading-relaxed pl-16">Connect your S3 buckets, DAM systems, or direct Google Drive links. We route your files across the Reframe network in seconds.</p>
+            <p className="text-[15px] font-medium text-black/50 leading-relaxed pl-16">Connect your S3 buckets, DAM systems, or direct Google Drive links. We route your files across the Reframe network in seconds.</p>
           </div>
         </motion.div>
         

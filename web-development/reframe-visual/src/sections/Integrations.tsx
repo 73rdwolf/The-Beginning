@@ -21,7 +21,7 @@ export const Integrations: React.FC = () => {
             <motion.div 
               key={i} 
               variants={{ hidden: { opacity: 0, scale: 0.9 }, show: { opacity: 1, scale: 1 } }}
-              className="h-[80px] flex items-center justify-center border border-black/5 rounded-2xl bg-white text-black text-[11px] font-black uppercase tracking-widest hover:bg-[#6366F1] hover:border-[#6366F1] hover:text-white transition-all shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(99,102,241,0.1)] cursor-pointer"
+              className="h-[80px] flex items-center justify-center border border-black/5 rounded-2xl bg-white text-black text-[13.5px] font-black uppercase tracking-widest hover:bg-[#6366F1] hover:border-[#6366F1] hover:text-white transition-all shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(99,102,241,0.1)] cursor-pointer"
             >
               {method}
             </motion.div>
@@ -38,12 +38,12 @@ export const Integrations: React.FC = () => {
             <h2 className="text-5xl md:text-7xl font-outfit font-black tracking-tight text-black leading-[0.9] uppercase">
               Your files. <br/>Your way.
             </h2>
-            <p className="text-sm font-bold tracking-widest text-[#6366F1] leading-relaxed uppercase">
+            <p className="text-[15px] font-bold tracking-widest text-[#6366F1] leading-relaxed uppercase">
               Upload via Google Drive, Dropbox, direct upload, or paste any link. 
               <br/><span className="text-black/40">Shopify and Zapier integrations coming soon.</span>
             </p>
           </div>
-          <a href="/about" className="w-fit text-[11px] font-black tracking-wider uppercase text-black hover:text-[#6366F1] hover:underline underline-offset-4 cursor-pointer">
+          <a href="/about" className="w-fit text-[13.5px] font-black tracking-wider uppercase text-black hover:text-[#6366F1] hover:underline underline-offset-4 cursor-pointer">
             See how uploads work →
           </a>
         </motion.div>
