@@ -1,0 +1,581 @@
+
+--- PRD ---
+Reframe Visual
+Product Requirements Document
+reframevisual.com
+
+
+Confidential — Reframe Visual © 2026
+
+What's New in PRD v2.0
+This document consolidates the original PRD (v1.0) and the PRD Addendum (v1.0) into a single authoritative source. All open questions from both documents have been resolved. Conflicts have been corrected.
+
+Key Changes from v1.0
+
+SECTION 01
+Overview
+Reframe Visual is a B2B platform for eCommerce brands, photographers, and marketing agencies that delivers catalog-ready images through expert in-house human retouchers supported by an AI-powered workflow system. Clients select editing services, upload images, track progress in real time, review before paying, and are backed by a 100% refund guarantee if unsatisfied.
+
+Core Value Proposition
+
+Service Model — Critical Clarification
+Humans do ALL image editing. AI is used exclusively for workflow operations — job routing, QA flagging, progress tracking, notifications, billing, and file management. AI does not touch, edit, or modify any customer image.
+
+SECTION 02
+Problem Statement
+eCommerce brands, photographers, and agencies waste significant time and money on inconsistent, slow image editing workflows. The industry standard was built for volume resellers — not the businesses doing the selling.
+
+Core Problems
+Flat pricing punishes brands that only need basic edits — simple and complex cost the same
+No real-time visibility into job progress — jobs disappear into a black box
+Payment required upfront regardless of output quality
+Revision cycles are slow, email-based, and imprecise — editors guess what the client means
+Inconsistent output quality when work is outsourced to freelancers
+Agencies charge per image whether the job takes 10 seconds or 10 minutes
+
+SECTION 03
+Target Users
+Note: Photographers added as Segment 2 — confirmed in PRD Addendum. Visible on landing page in ticker and FAQ.
+
+SECTION 04
+Goals & Success Metrics — MVP
+
+SECTION 05
+MVP Scope — 8 Weeks
+In Scope
+Service catalog with tiered pricing — Core, Retouching, Specialized (19 services)
+17 bundled packages with 9–15% savings vs individual pricing
+Self-serve job creation — 3-step flow (services, upload, review & submit)
+Dual upload: direct drag-and-drop AND cloud storage (Google Drive, Dropbox, shareable links)
+Human in-house editing pipeline with QA review layer
+AI-powered workflow — job routing, progress tracking, notifications, billing automation
+Real-time job and service-level progress tracking (updates within 60 seconds)
+Before/after image review interface with stage navigation
+Image annotation tools for revision requests (circles, arrows, freehand, text pins)
+Service-specific revision request workflow — 1 free revision per image per service
+Complexity verification by team after upload — customer notified and must approve if changed
+Payment after review — Stripe + PayPal + Bank Transfer (enterprise)
+Watermarked previews during review — high-res downloads unlock after payment
+100% refund guarantee policy enforcement
+First order discount — 20% off first paid order, auto-applied
+Free trial — 3 images edited at no cost
+Email notifications: progress updates, completion, revision ready, price change alerts
+Responsive mobile views — 375px and wider
+
+Out of Scope — Post-MVP
+Rush / expedited delivery (+50% for 12h, +100% for same-day)
+RAW file format support
+API access and webhooks for agency clients
+White-label client portal with custom domain
+Multiple subscription tiers
+Shopify, WooCommerce, Amazon, Zapier platform integrations
+Multi-seat team accounts and role-based permissions
+Per-image service variation within a single job
+
+SECTION 06
+Service Catalog & Pricing
+All prices shown per image. Three turnaround options: 24h, 48h, 72h. Three complexity tiers: Simple, Medium, Complex. Prices increase with faster turnaround and higher complexity.
+
+Core Services (9)
+
+
+
+
+
+
+
+
+
+
+Retouching Services (7)
+
+
+
+
+
+
+
+
+Specialized Services (3)
+
+
+
+
+Pricing Summary
+
+SECTION 06B
+Bundle Packages (17 Total)
+All bundle prices based on Medium complexity. Turnaround pricing applies across all three tiers. Savings shown against purchasing each service individually.
+
+For General eCommerce Sellers
+
+
+For Fashion & Apparel Brands
+
+
+For Jewelry Brands
+
+
+For Photo Studios & Agencies
+
+
+For Specialized Use Cases
+
+
+SECTION 07
+User Flows
+7.1 Job Creation — 3-Step Self-Serve Flow
+Step 1 — Service Selection  (/jobs/new/services)
+User browses 19 services grouped by category: Core, Retouching, Specialized
+Each service shows price, turnaround, and expandable before/after example
+User can select a pre-built bundle OR build a custom service combination
+Selecting compatible services triggers auto-suggestion for matching bundle
+Must select at least 1 service before proceeding
+Sticky bottom bar shows selected service count + estimated per-image price
+If selection matches a bundle — system suggests switching and shows savings
+
+Step 2 — Upload & Customization  (/jobs/new/upload)
+Job name — free text (e.g. Spring Collection 2026)
+Upload method — user chooses:
+Direct upload: drag-and-drop or click to browse
+Cloud: connect Google Drive or Dropbox via OAuth
+Link: paste any shareable URL (WeTransfer, OneDrive, FTP, etc.)
+Accepted formats: JPG, PNG, TIFF — max 50MB per image — max 100 images per job
+All images in one job receive the same services — different service sets require separate jobs
+Per-service settings panel — options vary by service type
+Special instructions — free text (optional)
+Reference images — upload to show preferred style (optional)
+Complexity selection: Simple / Medium / Complex
+Turnaround selection: 24h / 48h / 72h
+Estimated delivery calculated dynamically from submission time
+Sticky bottom bar shows image count, price calculation, and estimated delivery
+
+Step 3 — Review & Submit  (/jobs/new/review)
+Full order summary: job name, image count, service line items, total, delivery date
+Each service line: service name + complexity + turnaround + unit price x quantity = subtotal
+1 free revision per image per service — shown on summary
+First order 20% discount applied automatically if applicable — shown in breakdown
+CTA: 'Submit Job — Pay After Review' — no payment captured at submission
+
+7.2 Complexity Assessment — Two-Tier Verification
+Customer self-selects complexity during job creation (Simple / Medium / Complex)
+After upload, in-house editors review uploaded images
+If complexity differs from customer selection:
+System generates updated price
+Email sent to customer with: original vs revised complexity, reason, new total, approve/decline link
+Customer must approve before work begins
+If customer disputes — manual review available
+Note: Email subject: 'Action Required: Price Update for Job #[ID]'
+
+7.3 Job Tracking  (/jobs/[id])
+Overall progress bar with percentage and ETA
+Service-level progress: Complete (green) / In Progress (blue) / Pending (gray)
+Activity feed — timestamped log of job events
+Editor assignment visible — in-house editor name/initial + senior QA reviewer
+Page updates within 60 seconds of any pipeline state change
+
+7.4 Image Review & Approval  (/jobs/[id]/review)
+Side-by-side before/after viewer with zoom and pan
+Stage navigation: Original → each service applied → Final
+Per-image approval or revision request
+Annotation tools for revision requests: circles, arrows, freehand draw, text pins, color-coded markers
+Bulk action: Approve All — approves all remaining images at once
+Thumbnail strip — color coded: approved / revision / current / pending
+Sticky review progress bar: approved count / revision count / pending count / running total
+'Go to Payment' unlocks when all images have a decision (approved or revision submitted)
+Previews are watermarked — high-res files unlock after payment
+
+7.5 Revision Request Workflow
+Triggered by 'Request Revision' on any image in the review interface
+Customer selects which service needs revision (or multiple)
+Customer uses annotation tools to mark the exact area on the image
+Customer adds free-text description of the issue
+Optional reference image upload
+1 free revision included per image per service — counter shown in modal
+Revisions delivered within 12–24 hours
+⚠  Additional revisions beyond the 1 free — pricing TBD. Recommend $2/image. Confirm with founders.
+
+7.6 Payment Flow  (/jobs/[id]/payment)
+Customer submits job — no payment captured
+Team reviews images and confirms or adjusts complexity pricing
+Customer approves price (if changed) before editing begins
+In-house editors complete the work
+Customer reviews watermarked previews of edited images
+Customer approves images or requests revisions
+Once all images reviewed — customer proceeds to payment
+Payment page shows approved images only — revision images excluded until approved
+Customer pays via Stripe, PayPal, Bank Transfer, or Invoice (enterprise)
+High-resolution downloads unlock immediately after payment
+Files available for 30 days after payment
+
+7.7 Refund Policy
+100% refund if unsatisfied after revision has been delivered
+Refund triggered via customer support request or self-serve in dashboard (confirm with founders)
+No questions asked — full refund issued
+
+SECTION 08
+Platform Pages — Full List
+
+Modals
+
+SECTION 09
+System Emails
+Note: Email service: SendGrid, Postmark, or AWS SES. Transactional only. No marketing email at MVP.
+
+SECTION 10
+Technical Requirements
+10.1 Processing Pipeline
+Customer submits job with selected services, per-service settings, and uploaded images
+AI workflow assigns job to in-house editor based on service type and availability
+Editor reviews complexity — if different from customer selection, price change alert sent
+Customer approves revised price (if applicable)
+Human retoucher completes each service per image
+Senior QA reviewer checks output against service-specific quality standards
+Watermarked previews surface to customer in review interface
+Customer reviews, annotates, approves or requests revisions
+Revisions handled within 12–24h — customer notified on completion
+Customer approves all images and proceeds to payment
+Payment captured — high-resolution downloads unlocked
+
+10.2 Database Schema — Core Tables
+
+10.3 File Handling
+
+10.4 Integrations — MVP
+
+10.5 Non-Functional Requirements
+
+10.6 Frontend Libraries
+
+SECTION 11
+Design System Requirements
+11.1 Brand Tagline — Corrected
+OLD (incorrect): 'Professional Image Editing Powered by AI + Human Experts'
+NEW (correct): 'AI runs the workflow. Humans do the editing.'
+
+11.2 Color Palette
+
+11.3 Typography
+Font family: Inter (Google Fonts) — System fonts as fallback.
+
+11.4 Icon System — No Emoji
+All emoji placeholders must be replaced with professional icons from Lucide Icons (lucide.dev — MIT license) or Heroicons (heroicons.com — MIT license).
+
+SECTION 12
+Open Questions — Require Founder Decision
+
+SECTION 13
+Post-MVP Roadmap
+
+SECTION 14
+Marketing Claims — Verified Reference
+All claims used in marketing and landing page copy are either confirmed product facts or attributed industry statistics. No invented numbers.
+
+
+— End of Document —
+Reframe Visual PRD v2.0  |  March 2026  |  Confidential
+--- Content Plan ---
+Reframe Visual
+Full Platform Content Plan
+reframevisual.com
+
+
+Confidential — Reframe Visual © 2026
+
+Complete Site Map
+Every page, route, and system surface in the Reframe Visual platform.
+
+Public — Marketing Pages
+
+Platform — Authenticated Pages
+
+Modals
+
+System Emails
+
+— Public Pages — Marketing —
+
+PAGE-01  /  Landing Page
+Route: /  |  Type: Marketing  |  Primary CTA: Get 3 Images Edited Free
+
+
+Section 01 — Navigation
+↳  Sticky on scroll. Logo + tagline always visible.
+
+Section 02 — Hero
+↳  Primary conversion surface. Eyebrow pill above h1. Full-width screenshot below CTAs.
+
+Section 03 — Ticker
+↳  Auto-scroll. Pause on hover. Replace with client logos when available.
+
+Section 04 — Service Pill Index
+↳  New section added from reference. Gives immediate breadth signal — all 19 services visible.
+
+Section 05 — Workflow Block 1
+↳  Text left, platform screenshot right. Validates the visitor's product, names the gap.
+
+Section 06 — Integrations
+↳  Icons left, text right. Both upload methods shown. Shopify/Zapier marked Coming Soon.
+
+Section 07 — Workflow Block 2 (Scale)
+↳  Screenshot left, text right. Industry as the villain — not a named competitor.
+
+Section 08 — Differentiation
+↳  Two-column comparison table. Industry norms as the left column. Reframe as the right. No named competitors.
+
+Section 09 — Social Proof
+↳  Industry stats at launch. Replace with real review cards when testimonials are available.
+
+Section 10 — How It Works
+↳  Horizontal 3-step layout with connector lines between steps. CTA directly below. Matches self-serve flow — no phone call required.
+
+Section 11 — Pricing Bundles
+↳  3 cards. Middle card highlighted. Industry intro frames the context. Offer callout below cards.
+
+Section 12 — FAQ
+↳  Accordion. 6 questions. h2 is confident not FOMO-driven.
+
+Section 13 — Bottom CTA
+↳  Dark section. Full-bleed background image layer. Pull quote card floats over image. Final conversion push.
+
+Section 14 — Feature Showcase
+↳  4-column before/after grid. Visual proof of work quality.
+
+Section 15 — Footer
+↳  Large brand statement block above 3-column link grid. Same structural pattern as reference.
+
+PAGE-02  /services  Services Catalog
+Route: /services  |  Type: Marketing  |  Primary CTA: Start a Job / Add to Job
+
+
+Page Hero
+
+Filter Bar
+
+Service Card Grid
+
+Service Detail Modal (MODAL-01)
+↳  Triggered by clicking any service card.
+
+Bottom CTA
+
+PAGE-03  /pricing  Pricing & Bundles
+Route: /pricing  |  Type: Marketing  |  Primary CTA: Get Started
+
+
+Page Hero
+
+How Pricing Works
+
+Bundle Filter Bar
+
+Bundle Sections — All 17 Bundles
+↳  Each bundle card: services listed, individual price, bundle price, savings %, turnaround selector, complexity selector, CTA.
+
+Pricing Rules Block
+
+High Volume CTA
+
+PAGE-04  /about  About Reframe
+Route: /about  |  Type: Marketing  |  Primary CTA: Start for Free
+
+
+Page Hero
+
+Origin Story
+
+Stats Block
+↳  Use industry stats until real platform stats are earned.
+
+How Reframe Works (Brief)
+
+Page CTA
+
+PAGE-05  /insights  Blog / Insights
+Route: /insights  |  Type: Marketing  |  Primary Goal: SEO + authority + engagement
+
+
+Page Hero
+
+Category Filter
+
+Featured Article
+
+Article Grid
+
+PAGE-06  /contact  Contact
+Route: /contact  |  Type: Marketing  |  Primary Goal: Qualify + route inbound
+
+
+Page Hero
+
+Contact Options
+
+Enterprise / High Volume Block
+
+— Platform Pages — Authenticated —
+
+PAGE-07  /dashboard  Job Dashboard
+Route: /dashboard  |  Type: Platform  |  Auth: Required  |  Primary CTA: Create New Job
+
+
+Page Header
+
+Job Card States
+
+Empty State
+
+PAGE-08  /jobs/new/services  Step 1 — Service Selection
+Route: /jobs/new/services  |  Type: Platform  |  Auth: Required
+
+
+Page Header
+
+Search + Filter
+
+Popular Bundles (shown first)
+
+Build Your Own — Service List
+
+Bundle Auto-Suggest
+
+Sticky Bottom Bar
+
+PAGE-09  /jobs/new/upload  Step 2 — Upload & Customization
+Route: /jobs/new/upload  |  Type: Platform  |  Auth: Required
+
+
+Page Header
+
+Services Selected Summary
+
+Job Name
+
+Upload Zone
+
+Image Grid (after upload)
+
+Service Settings Panel
+↳  One panel per selected service. Options vary by service type.
+
+Special Instructions + Reference
+
+Complexity & Turnaround
+
+Sticky Bottom Bar
+
+PAGE-10  /jobs/new/review  Step 3 — Review & Submit
+Route: /jobs/new/review  |  Type: Platform  |  Auth: Required
+
+
+Page Header
+
+Order Summary
+
+PAGE-11  /jobs/[id]  Job Tracking / Detail
+Route: /jobs/[id]  |  Type: Platform  |  Auth: Required  |  Updates within 60 seconds
+
+
+Page Header
+
+Overall Progress
+
+Service-Level Progress
+
+Activity Feed
+
+Editor Assignment
+
+Job Details
+
+Actions
+
+PAGE-12  /jobs/[id]/review  Image Review & Approval
+Route: /jobs/[id]/review  |  Type: Platform  |  Auth: Required
+
+
+Page Header
+
+Before / After Viewer
+
+Services Applied
+
+Decision Controls
+
+Thumbnail Strip
+
+Sticky Review Progress Bar
+
+MODAL-02  Revision Request
+Trigger: 'Request Revision' button on /jobs/[id]/review
+
+
+
+PAGE-13  /jobs/[id]/payment  Payment
+Route: /jobs/[id]/payment  |  Type: Platform  |  Auth: Required  |  Payment after review only
+
+
+Page Header
+
+Order Summary
+
+Payment Methods
+
+Guarantee Block
+
+CTA
+
+PAGE-14  /account  Account Settings
+Route: /account  |  Type: Platform  |  Auth: Required
+
+
+Sections
+
+— System Emails —
+
+System Emails — All 5 Templates
+From: Reframe <jobs@reframevisual.com>  |  Service: SendGrid / Postmark / AWS SES
+
+
+EMAIL-01 — Job Progress Update
+
+EMAIL-02 — Job Complete / Ready for Review
+
+EMAIL-03 — Revision Complete
+
+EMAIL-04 — Price Change Alert
+
+EMAIL-05 — Payment Confirmation
+
+— Copy Rules & Tone Guide —
+Writing Rules — For Developers & Content Authors
+Apply these rules to every string, label, tooltip, error message, and CTA across the entire platform.
+
+
+Tone
+
+AI / Human Distinction — Mandatory
+⚠  Every mention of AI must clarify the role. AI routes, tracks, and notifies. Humans edit. This must never be ambiguous.
+
+CTA Copy Rules
+
+Error Messages
+
+Status Labels
+
+— Claims Audit —
+All Marketing Claims — Verified
+Every claim used on any public page must appear in this table with a source. No unverified claim may be published.
+
+
+
+⚠  One claim requires founder confirmation before publishing: 'Get 3 images edited free — no payment details needed.' Confirm whether account creation is required upfront for the free trial.
+
+— Open Questions —
+Remaining Decisions — Require Founder Input
+These items block specific copy or feature decisions. None block the MVP build — all have interim workarounds.
+
+
+
+— End of Document —
+Reframe Visual Full Platform Content Plan v3.0  |  March 2026  |  Confidential
