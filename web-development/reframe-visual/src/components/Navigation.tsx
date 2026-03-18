@@ -21,7 +21,7 @@ export const Navigation: React.FC = () => {
         <button onClick={() => window.location.href='/login'} className="hidden md:flex items-center gap-2 text-[11px] font-bold tracking-widest text-black/60 hover:text-black uppercase transition-all duration-300 ease-out">
           Login
         </button>
-        <button onClick={() => window.location.href='/jobs/new/services'} className="bg-black text-white px-8 py-4 rounded-md text-[10px] font-bold tracking-widest uppercase hover:-translate-y-0.5 shadow-[0_8px_30px_rgba(124,58,237,0.06)] hover:shadow-[0_16px_40px_rgba(124,58,237,0.15)] transition-all duration-300 ease-out">
+        <button onClick={() => window.location.href='/jobs/new/services'} className="bg-black text-white px-8 py-4 rounded-2xl text-[10px] font-bold tracking-widest uppercase hover:-translate-y-0.5 shadow-[0_8px_30px_rgba(124,58,237,0.06)] hover:shadow-[0_16px_40px_rgba(124,58,237,0.15)] transition-all duration-300 ease-out">
           Start for Free —
         </button>
         <div className="lg:hidden p-2">

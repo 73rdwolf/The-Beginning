@@ -19,7 +19,7 @@ export const JobDetail: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
             <h2 className="text-xl font-outfit font-bold uppercase tracking-tighter mb-4">Pipeline Progress</h2>
-            <div className="bg-white border-2 border-black p-8 shadow-[4px_4px_0px_#121212] mb-8">
+            <div className="bg-white border-2 border-black p-8 rounded-3xl shadow-[4px_4px_0px_#121212] mb-8">
               <div className="flex justify-between items-end mb-2">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-[#6366F1]">In Progress</span>
                 <span className="text-[10px] font-bold tracking-widest">60%</span>
@@ -66,7 +66,7 @@ export const JobDetail: React.FC = () => {
           
           <div>
             <h2 className="text-xl font-outfit font-bold uppercase tracking-tighter mb-4">Job Details</h2>
-            <div className="bg-white border-2 border-black p-6 shadow-[4px_4px_0px_#121212] flex flex-col gap-4 text-sm font-medium">
+            <div className="bg-white border-2 border-black p-6 rounded-3xl shadow-[4px_4px_0px_#121212] flex flex-col gap-4 text-sm font-medium">
               <div className="flex justify-between border-b border-black/10 pb-2">
                 <span className="text-black/60">Images</span>
                 <span className="font-bold">42</span>

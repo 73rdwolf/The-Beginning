@@ -15,14 +15,14 @@ export const HowItWorks: React.FC = () => {
         </h2>
         <div className="grid md:grid-cols-3 gap-8 w-full">
           {steps.map((step, i) => (
-            <div key={i} className="bg-white border-2 border-black p-8 rounded-md flex flex-col gap-6 shadow-[6px_6px_0px_#121212] hover:-translate-y-1 hover:shadow-[8px_8px_0px_#6366F1] transition-all">
-              <span className="bg-black text-white w-fit px-3 py-1 rounded-sm text-[10px] font-black tracking-widest uppercase">{step.id}</span>
+            <div key={i} className="bg-white border-2 border-black p-8 rounded-2xl flex flex-col gap-6 shadow-[6px_6px_0px_#121212] hover:-translate-y-1 hover:shadow-[8px_8px_0px_#6366F1] transition-all">
+              <span className="bg-black text-white w-fit px-3 py-1 rounded-xl text-[10px] font-black tracking-widest uppercase">{step.id}</span>
               <h3 className="text-xl font-outfit font-black text-black leading-tight uppercase">{step.title}</h3>
               <p className="text-xs font-bold tracking-wide text-gray-700 leading-relaxed uppercase">{step.desc}</p>
             </div>
           ))}
         </div>
-        <button className="mt-20 bg-black text-white px-10 py-5 rounded-md text-[11px] font-black tracking-[0.15em] uppercase border border-black shadow-[5px_5px_0px_#6366F1] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_#6366F1] transition-all">
+        <button className="mt-20 bg-black text-white px-10 py-5 rounded-2xl text-[11px] font-black tracking-[0.15em] uppercase border border-black shadow-[5px_5px_0px_#6366F1] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_#6366F1] transition-all">
            Create a Job —
         </button>
       </div>

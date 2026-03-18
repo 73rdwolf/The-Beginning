@@ -27,7 +27,7 @@ export const LoginPage: React.FC = () => {
               <input type="password" placeholder="••••••••" className="w-full p-4 border-2 border-black/20 focus:border-[#6366F1] outline-none font-medium transition-colors" />
             </div>
             
-            <button type="button" onClick={() => window.location.href='/dashboard'} className="w-full bg-black text-white py-4 mt-4 uppercase text-[11px] font-bold tracking-[0.15em] border-2 border-black hover:-translate-y-1 hover:shadow-[4px_4px_0px_#6366F1] transition-all">
+            <button type="button" onClick={() => window.location.href='/dashboard'} className="w-full bg-black text-white py-4 mt-4 rounded-2xl uppercase text-[11px] font-bold tracking-[0.15em] border-2 border-black hover:-translate-y-1 hover:shadow-[4px_4px_0px_#6366F1] transition-all">
               Sign In —
             </button>
           </form>

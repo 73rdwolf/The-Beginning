@@ -15,7 +15,7 @@ export const SocialProof: React.FC = () => {
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {stats.map((stat, i) => (
-            <div key={i} className="bg-white border-2 border-black p-8 rounded-md flex flex-col items-start gap-4 shadow-[6px_6px_0px_#6366F1] hover:-translate-y-1 hover:shadow-[8px_8px_0px_#6366F1] transition-all">
+            <div key={i} className="bg-white border-2 border-black p-8 rounded-2xl flex flex-col items-start gap-4 shadow-[6px_6px_0px_#6366F1] hover:-translate-y-1 hover:shadow-[8px_8px_0px_#6366F1] transition-all">
               <div className="text-6xl font-outfit font-black text-black tracking-tighter">{stat.num}</div>
               <div className="text-[11px] font-bold text-black uppercase tracking-widest leading-relaxed">{stat.desc}</div>
             </div>

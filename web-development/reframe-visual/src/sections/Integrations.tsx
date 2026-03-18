@@ -8,7 +8,7 @@ export const Integrations: React.FC = () => {
       <div className="container mx-auto px-6 md:px-20 grid lg:grid-cols-2 gap-16 lg:gap-32 items-center">
         <div className="grid grid-cols-2 gap-6 order-2 lg:order-1">
           {methods.map((method, i) => (
-            <div key={i} className="h-[80px] flex items-center justify-center border-2 border-black rounded-md bg-white text-black text-[11px] font-black uppercase tracking-widest hover:bg-[#6366F1] hover:border-[#6366F1] hover:text-white transition-all shadow-[4px_4px_0px_#121212] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#121212] cursor-pointer">
+            <div key={i} className="h-[80px] flex items-center justify-center border-2 border-black rounded-2xl bg-white text-black text-[11px] font-black uppercase tracking-widest hover:bg-[#6366F1] hover:border-[#6366F1] hover:text-white transition-all shadow-[4px_4px_0px_#121212] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#121212] cursor-pointer">
               {method}
             </div>
           ))}

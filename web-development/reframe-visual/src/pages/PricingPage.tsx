@@ -34,7 +34,7 @@ export const PricingPage: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {bundles.map((bundle, idx) => (
-            <div key={idx} className={`bg-white border-2 border-black p-8 shadow-[6px_6px_0px_#121212] flex flex-col ${idx === 1 ? 'ring-4 ring-[#6366F1]' : ''}`}>
+            <div key={idx} className={`bg-white border-2 border-black p-8 rounded-3xl shadow-[6px_6px_0px_#121212] flex flex-col ${idx === 1 ? 'ring-4 ring-[#6366F1]' : ''}`}>
               {idx === 1 && <span className="bg-[#6366F1] text-white text-[10px] font-bold tracking-widest uppercase px-3 py-1 self-start mb-4">Most Popular</span>}
               <h3 className="text-2xl font-outfit font-black uppercase tracking-tight mb-6">{bundle.name}</h3>
               

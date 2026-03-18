@@ -20,7 +20,7 @@ export const FAQ: React.FC = () => {
         </h2>
         <div className="space-y-6">
           {faqs.map((faq, i) => (
-            <div key={i} className="border-2 border-black rounded-md overflow-hidden shadow-[6px_6px_0px_#121212] bg-white transition-all hover:-translate-y-1">
+            <div key={i} className="border-2 border-black rounded-2xl overflow-hidden shadow-[6px_6px_0px_#121212] bg-white transition-all hover:-translate-y-1">
               <button 
                 onClick={() => setOpen(open === i ? null : i)}
                 className="w-full flex items-center justify-between p-6 text-left hover:bg-black hover:text-white transition-colors group"

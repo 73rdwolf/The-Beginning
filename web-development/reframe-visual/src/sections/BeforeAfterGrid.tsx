@@ -13,7 +13,7 @@ export const BeforeAfterGrid: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {samples.map((label, i) => (
             <div key={i} className="flex flex-col gap-4 group cursor-pointer">
-              <div className="relative h-48 md:h-64 overflow-hidden rounded-md border-2 border-black bg-black shadow-[4px_4px_0px_#121212] group-hover:shadow-[6px_6px_0px_#6366F1] group-hover:-translate-y-1 transition-all">
+              <div className="relative h-48 md:h-64 overflow-hidden rounded-2xl border-2 border-black bg-black shadow-[4px_4px_0px_#121212] group-hover:shadow-[6px_6px_0px_#6366F1] group-hover:-translate-y-1 transition-all">
                  <div className="absolute inset-0 bg-[#1A1A1A] flex items-center justify-center text-[10px] text-white/30 uppercase tracking-widest font-black">
                     Sample Plate
                  </div>
@@ -24,7 +24,7 @@ export const BeforeAfterGrid: React.FC = () => {
           ))}
         </div>
         <div className="mt-16 text-center">
-           <a href="/services" className="inline-flex items-center justify-center gap-3 bg-white text-black border-2 border-black rounded-md px-8 py-4 text-[11px] font-black tracking-[0.15em] uppercase hover:bg-black hover:text-white transition-all shadow-[4px_4px_0px_#121212]">Explore All 19 Services —</a>
+           <a href="/services" className="inline-flex items-center justify-center gap-3 bg-white text-black border-2 border-black rounded-2xl px-8 py-4 text-[11px] font-black tracking-[0.15em] uppercase hover:bg-black hover:text-white transition-all shadow-[4px_4px_0px_#121212]">Explore All 19 Services —</a>
         </div>
       </div>
     </section>

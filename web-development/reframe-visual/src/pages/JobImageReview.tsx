@@ -11,7 +11,7 @@ export const JobImageReview: React.FC = () => {
         </div>
         <div className="flex items-center gap-4">
           <span className="text-[10px] font-bold uppercase tracking-widest text-[#6366F1]">18 / 42 Ready</span>
-          <a href="/jobs/9482/payment" className="bg-[#6366F1] text-white px-6 py-2 text-[10px] font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-colors">
+          <a href="/jobs/9482/payment" className="bg-[#6366F1] text-white px-6 py-2 text-[10px] rounded-full font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-colors">
             Approve All & Pay
           </a>
         </div>

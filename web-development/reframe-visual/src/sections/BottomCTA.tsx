@@ -12,10 +12,10 @@ export const BottomCTA: React.FC = () => {
           3 free edits. No credit card. Your first real order gets 20% off. 
           <br/>Experience the Reframe workflow today.
         </p>
-        <button className="bg-white text-black px-10 py-5 rounded-md border-2 border-black text-[12px] font-black tracking-[0.15em] uppercase hover:bg-[#6366F1] hover:border-[#6366F1] hover:text-white transition-all shadow-[6px_6px_0px_#6366F1] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_#F9F9F9]">
+        <button className="bg-white text-black px-10 py-5 rounded-2xl border-2 border-black text-[12px] font-black tracking-[0.15em] uppercase hover:bg-[#6366F1] hover:border-[#6366F1] hover:text-white transition-all shadow-[6px_6px_0px_#6366F1] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_#F9F9F9]">
           Start with 3 Free Edits —
         </button>
-        <p className="mt-12 text-[10px] text-white font-black uppercase tracking-[0.2em] opacity-50 bg-white/10 px-4 py-2 rounded-sm border border-white/20">
+        <p className="mt-12 text-[10px] text-white font-black uppercase tracking-[0.2em] opacity-50 bg-white/10 px-4 py-2 rounded-xl border border-white/20">
           Your first real order gets 20% off — automatically.
         </p>
       </div>

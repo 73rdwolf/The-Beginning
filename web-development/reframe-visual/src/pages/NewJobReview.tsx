@@ -15,7 +15,7 @@ export const NewJobReview: React.FC = () => {
           <h1 className="text-3xl font-outfit font-black tracking-tight uppercase text-black">Order Summary</h1>
         </div>
         
-        <div className="max-w-4xl bg-white border-2 border-black p-8 shadow-[6px_6px_0px_#121212]">
+        <div className="max-w-4xl bg-white border-2 border-black p-8 rounded-3xl shadow-[6px_6px_0px_#121212]">
           <h2 className="text-xl font-outfit font-bold uppercase tracking-tighter mb-8 border-b-2 border-black/10 pb-4">Spring Collection 2026</h2>
           
           <div className="flex justify-between items-end mb-4 border-b border-black/10 pb-4">
@@ -45,7 +45,7 @@ export const NewJobReview: React.FC = () => {
         </div>
 
         <div className="fixed bottom-0 left-0 w-full bg-[#121212] border-t-4 border-[#6366F1] py-4 px-10 md:px-20 lg:px-[10%] flex justify-end items-center z-50">
-          <a href="/dashboard" className="bg-[#6366F1] text-white px-8 py-4 text-[11px] font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-colors">Submit Job — Pay After Review</a>
+          <a href="/dashboard" className="bg-[#6366F1] text-white px-8 py-4 rounded-full text-[11px] font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-colors">Submit Job — Pay After Review</a>
         </div>
       </main>
     </div>

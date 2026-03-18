@@ -26,7 +26,7 @@ export const AccountSettings: React.FC = () => {
         <div className="flex-grow max-w-3xl">
           <h1 className="text-3xl font-outfit font-black tracking-tight uppercase text-black mb-8 border-b-2 border-black pb-4">Profile Settings</h1>
           
-          <div className="bg-white border-2 border-black p-8 shadow-[4px_4px_0px_#121212] mb-8">
+          <div className="bg-white border-2 border-black p-8 rounded-3xl shadow-[4px_4px_0px_#121212] mb-8">
             <h2 className="text-xl font-outfit font-bold uppercase tracking-tight mb-6">Personal Information</h2>
             <form className="space-y-6">
               <div className="grid grid-cols-2 gap-6">
@@ -53,7 +53,7 @@ export const AccountSettings: React.FC = () => {
           <div className="bg-red-50 border-2 border-red-200 p-8">
             <h2 className="text-xl font-outfit font-bold uppercase tracking-tight text-red-600 mb-2">Danger Zone</h2>
             <p className="text-sm font-medium text-red-600/70 mb-6">Permanently delete your account and all associated job data. This action is not reversible.</p>
-            <button className="border-2 border-red-600 text-red-600 px-6 py-2 text-[10px] font-bold tracking-widest uppercase hover:bg-red-600 hover:text-white transition-colors">
+            <button className="border-2 border-red-600 text-red-600 px-6 py-2 text-[10px] rounded-full font-bold tracking-widest uppercase hover:bg-red-600 hover:text-white transition-colors">
               Delete Account
             </button>
           </div>

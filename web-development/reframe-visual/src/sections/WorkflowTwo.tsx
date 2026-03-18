@@ -4,7 +4,7 @@ export const WorkflowTwo: React.FC = () => {
   return (
     <section className="py-24 md:py-32 bg-white border-b border-black">
       <div className="container mx-auto px-6 md:px-20 grid lg:grid-cols-2 gap-16 lg:gap-32 items-center">
-        <div className="bg-black text-white rounded-md h-[400px] border-2 border-black flex flex-col items-center justify-center text-[11px] font-black uppercase tracking-widest shadow-[6px_6px_0px_#6366F1] p-8 text-center">
+        <div className="bg-black text-white rounded-2xl h-[400px] border-2 border-black flex flex-col items-center justify-center text-[11px] font-black uppercase tracking-widest shadow-[6px_6px_0px_#6366F1] p-8 text-center">
            Industry Villain Placeholder
            <p className="font-normal tracking-wide opacity-50 text-[10px] mt-4 max-w-[200px]">Insert an asset demonstrating a bad workflow here.</p>
         </div>

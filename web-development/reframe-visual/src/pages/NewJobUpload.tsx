@@ -35,7 +35,7 @@ export const NewJobUpload: React.FC = () => {
 
           <div>
             <label className="block text-[10px] font-bold uppercase tracking-widest mb-2">Upload Images</label>
-            <div className="border-2 border-dashed border-black/30 bg-white p-20 flex flex-col items-center justify-center text-center cursor-pointer hover:border-[#6366F1] hover:bg-[#6366F1]/5 transition-all">
+            <div className="border-2 border-dashed border-black/30 rounded-3xl bg-white p-20 flex flex-col items-center justify-center text-center cursor-pointer hover:border-[#6366F1] hover:bg-[#6366F1]/5 transition-all">
               <div className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center mb-6">
                 <span className="text-2xl font-light">+</span>
               </div>
@@ -51,7 +51,7 @@ export const NewJobUpload: React.FC = () => {
             <span className="text-xl font-bold font-outfit block">0 Images Uploaded</span>
             <span className="text-[10px] uppercase tracking-widest text-[#6366F1] font-bold">Total updates based on Turnaround</span>
           </div>
-          <a href="/jobs/new/review" className="bg-[#6366F1] text-white px-8 py-4 text-[11px] font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-colors">Review & Submit —</a>
+          <a href="/jobs/new/review" className="bg-[#6366F1] text-white px-8 py-4 rounded-full text-[11px] font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-colors">Review & Submit —</a>
         </div>
       </main>
     </div>

@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
             <p className="text-sm font-bold tracking-widest text-[#6366F1] uppercase">
               AI runs the workflow. Humans do the editing.
             </p>
-            <button className="w-fit bg-black text-white px-8 py-4 rounded-md text-[11px] font-black tracking-[0.15em] uppercase border border-black shadow-[4px_4px_0px_#6366F1] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#6366F1] transition-all">
+            <button className="w-fit bg-black text-white px-8 py-4 rounded-2xl text-[11px] font-black tracking-[0.15em] uppercase border border-black shadow-[4px_4px_0px_#6366F1] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#6366F1] transition-all">
               Start for Free —
             </button>
           </div>

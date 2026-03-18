@@ -7,7 +7,7 @@ export const Hero: React.FC = () => {
         
         {/* Left Side: Copy */}
         <div className="flex flex-col justify-center px-8 sm:px-12 md:px-20 py-16 text-black bg-white">
-          <div className="bg-black text-white rounded-sm text-[10px] font-black tracking-[0.15em] uppercase px-3 py-1.5 w-fit mb-10">
+          <div className="bg-black text-white rounded-xl text-[10px] font-black tracking-[0.15em] uppercase px-3 py-1.5 w-fit mb-10">
             + Professional editing from $0.19
           </div>
           
@@ -31,7 +31,7 @@ export const Hero: React.FC = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8 mt-4">
-            <button onClick={() => window.location.href='/jobs/new/services'} className="bg-black text-white rounded-md px-10 py-5 text-[11px] font-black tracking-[0.15em] uppercase shadow-[6px_6px_0px_#6366F1] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_#6366F1] transition-all">
+            <button onClick={() => window.location.href='/jobs/new/services'} className="bg-black text-white rounded-2xl px-10 py-5 text-[11px] rounded-full font-black tracking-[0.15em] uppercase shadow-[6px_6px_0px_#6366F1] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_#6366F1] transition-all">
               Get 3 Images Edited Free —
             </button>
             <button onClick={() => window.location.href='/services'} className="text-[11px] font-black tracking-[0.15em] uppercase hover:underline underline-offset-4 cursor-pointer text-gray-600 hover:text-black">
@@ -45,14 +45,14 @@ export const Hero: React.FC = () => {
           
           {/* Top BEFORE Badge Label (Pill) */}
           <div className="absolute top-6 left-6 z-20">
-            <span className="bg-black/40 backdrop-blur-md text-white border border-white/20 rounded-full px-4 py-2 text-[10px] font-black tracking-[0.2em] uppercase shadow-sm">
+            <span className="bg-black/40 backdrop-blur-md text-white border border-white/20 rounded-full px-4 py-2 text-[10px] rounded-full font-black tracking-[0.2em] uppercase shadow-sm">
               Before
             </span>
           </div>
           
           {/* Top AFTER Badge Label (Pill) */}
           <div className="absolute top-6 right-6 z-20">
-            <span className="bg-black/40 backdrop-blur-md text-white border border-white/20 rounded-full px-4 py-2 text-[10px] font-black tracking-[0.2em] uppercase shadow-sm">
+            <span className="bg-black/40 backdrop-blur-md text-white border border-white/20 rounded-full px-4 py-2 text-[10px] rounded-full font-black tracking-[0.2em] uppercase shadow-sm">
               After — Reframe
             </span>
           </div>
