@@ -1,58 +1,41 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 export const WorkflowOne: React.FC = () => {
   return (
-    <section className="py-24 md:py-32 bg-white border-b border-black">
-      <div className="container mx-auto px-6 md:px-20 grid lg:grid-cols-2 gap-16 lg:gap-32 items-center">
+    <section className="py-32 px-10 md:px-20 lg:px-[10%] xl:px-[12%] bg-white border-b border-black/5 overflow-hidden">
+      <div className="grid lg:grid-cols-2 gap-24 items-center">
+        <motion.div 
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+        >
+          <span className="text-[#6366F1] font-bold tracking-widest uppercase text-[10px] mb-6 block">Phase 01 — Logistics</span>
+          <h2 className="text-5xl md:text-7xl font-outfit font-black tracking-tight text-black uppercase leading-[0.9] mb-10">
+            Frictionless <br />Asset Ingestion.
+          </h2>
+          <div className="space-y-8">
+            <div className="flex gap-6 items-start">
+               <div className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-outfit font-black flex-shrink-0 shadow-lg">1</div>
+               <p className="text-lg font-medium text-black/70 italic leading-relaxed">"Drop 10 images or 10,000. Our pipeline handles the extraction metadata automatically."</p>
+            </div>
+            <p className="text-sm font-medium text-black/50 leading-relaxed pl-16">Connect your S3 buckets, DAM systems, or direct Google Drive links. We route your files across the Reframe network in seconds.</p>
+          </div>
+        </motion.div>
         
-        <div className="flex flex-col gap-10 order-2 lg:order-1 border-l-[3px] border-black pl-8">
-          <div className="flex flex-col gap-4">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-outfit font-black tracking-tight text-black leading-[0.9] uppercase">
-              Your product is great. <br/>Now make it impossible to scroll past.
-            </h2>
-            <p className="text-sm font-bold tracking-widest text-[#6366F1] uppercase mt-2">
-              Three steps. That's it.
-            </p>
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="bg-gray-50 rounded-3xl border border-black/5 aspect-square shadow-inner flex items-center justify-center p-12 overflow-hidden"
+        >
+          <div className="bg-white w-full h-full rounded-2xl shadow-[0_30px_60px_rgba(0,0,0,0.06)] border border-black/5 p-8 flex flex-col justify-center gap-6">
+             <div className="h-4 w-1/3 bg-gray-100 rounded-full"></div>
+             <div className="h-4 w-1/2 bg-[#6366F1]/10 rounded-full"></div>
+             <div className="h-24 w-full bg-gray-50 rounded-2xl"></div>
+             <div className="h-4 w-2/3 bg-gray-100 rounded-full"></div>
           </div>
-
-          <div className="flex flex-col">
-            <div className="flex gap-6 py-6 border-b-2 border-black">
-              <div className="w-8 h-8 rounded-xl bg-black border border-black flex items-center justify-center text-xs font-black text-white shrink-0">1</div>
-              <div className="flex flex-col gap-2">
-                <h4 className="text-[14px] font-black text-black uppercase tracking-widest">Upload Your Catalog</h4>
-                <p className="text-black text-xs font-semibold leading-relaxed">Drag and drop or sync via Google Drive/Dropbox.</p>
-              </div>
-            </div>
-
-            <div className="flex gap-6 py-6 border-b-2 border-black">
-              <div className="w-8 h-8 rounded-xl bg-black border border-black flex items-center justify-center text-xs font-black text-white shrink-0">2</div>
-              <div className="flex flex-col gap-2">
-                <h4 className="text-[14px] font-black text-black uppercase tracking-widest">Select Services</h4>
-                <p className="text-black text-xs font-semibold leading-relaxed">Pick from 19 specialized human-editing services.</p>
-              </div>
-            </div>
-
-            <div className="flex gap-6 py-6">
-              <div className="w-8 h-8 rounded-xl bg-[#6366F1] border border-black flex items-center justify-center text-xs font-black text-white shrink-0 shadow-[2px_2px_0px_#121212]">3</div>
-              <div className="flex flex-col gap-2">
-                <h4 className="text-[14px] font-black text-black uppercase tracking-widest">Review & Pay</h4>
-                <p className="text-black text-xs font-semibold leading-relaxed">Inspect watermarked previews. Pay only after you approve.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="relative order-1 lg:order-2 lg:translate-x-4">
-          <div className="relative bg-white border-2 border-black rounded-lg p-3 shadow-[8px_8px_0px_#6366F1] overflow-hidden aspect-[4/3] lg:h-[450px]">
-            <div className="absolute inset-0 bg-[url('/images/generated-1773485847782.png')] bg-cover bg-center rounded-xl"></div>
-            <div className="absolute inset-0 bg-black/10"></div>
-            <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/90 border-2 border-black rounded-2xl shadow-[4px_4px_0px_#121212]">
-               <div className="text-[10px] font-black uppercase tracking-widest text-black mb-1">The Reframe Platform</div>
-               <div className="text-xs font-bold text-black uppercase">Dashboard — order tracking</div>
-            </div>
-          </div>
-        </div>
-
+        </motion.div>
       </div>
     </section>
   );
