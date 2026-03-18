@@ -43,7 +43,7 @@ export const ServicesCatalog: React.FC = () => {
                     <div className="text-xl font-black font-outfit">{svc.price} <span className="text-[10px] text-black/50 font-medium">/ IMG</span></div>
                     <span className="text-[10px] uppercase font-bold tracking-widest text-black/50 group-hover:text-[#6366F1] transition-colors">Deep Dive —</span>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>

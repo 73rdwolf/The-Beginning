@@ -1,32 +1,51 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 export const BeforeAfterGrid: React.FC = () => {
-  const samples = ["BG Removal", "Jewelry Retouch", "Ghost Mannequin", "Model Retouch"];
-
   return (
-    <section className="py-24 md:py-32 bg-white border-b border-black">
-      <div className="container mx-auto px-6 md:px-20">
-        <div className="flex flex-col gap-4 mb-16 border-l-[3px] border-black pl-8">
-          <h2 className="text-5xl md:text-6xl font-outfit font-black text-black tracking-tight leading-none uppercase">See the results.</h2>
-          <p className="text-sm font-bold tracking-widest text-[#6366F1] leading-relaxed uppercase">Every service. Every detail. Real samples from Reframe editors.</p>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {samples.map((label, i) => (
-            <div key={i} className="flex flex-col gap-4 group cursor-pointer">
-              <div className="relative h-48 md:h-64 overflow-hidden rounded-2xl border-2 border-black bg-black shadow-[4px_4px_0px_#121212] group-hover:shadow-[6px_6px_0px_#6366F1] group-hover:-translate-y-1 transition-all">
-                 <div className="absolute inset-0 bg-[#1A1A1A] flex items-center justify-center text-[10px] text-white/30 uppercase tracking-widest font-black">
-                    Sample Plate
-                 </div>
-                 <div className="absolute inset-0 bg-[#6366F1]/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              </div>
-              <span className="text-[11px] font-black text-black uppercase tracking-widest">{label}</span>
-            </div>
-          ))}
-        </div>
-        <div className="mt-16 text-center">
-           <a href="/services" className="inline-flex items-center justify-center gap-3 bg-white text-black border-2 border-black rounded-2xl px-8 py-4 text-[11px] font-black tracking-[0.15em] uppercase hover:bg-black hover:text-white transition-all shadow-[4px_4px_0px_#121212]">Explore All 19 Services —</a>
-        </div>
+    <section className="bg-white py-32 px-10 md:px-20 lg:px-[10%] xl:px-[12%] overflow-hidden">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mb-16"
+      >
+        <span className="text-[#6366F1] font-bold tracking-widest uppercase text-[10px] mb-4 block">Proven Results</span>
+        <h2 className="text-4xl md:text-5xl font-outfit font-black uppercase tracking-tight text-black flex flex-col sm:flex-row gap-4">
+          Extreme Precision. <span>Every Pixel.</span>
+        </h2>
+      </motion.div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        {[1, 2].map((i) => (
+          <motion.div 
+            key={i}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.1 }}
+            className="aspect-video bg-gray-100 rounded-3xl border border-black/5 overflow-hidden relative shadow-lg group"
+          >
+             <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-20"></div>
+             <div className="absolute bottom-6 left-6 flex gap-2">
+                <span className="bg-white/80 backdrop-blur-md px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest border border-black/5 shadow-sm">Before</span>
+                <span className="bg-black/80 backdrop-blur-md text-white px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest border border-white/10 shadow-sm">After</span>
+             </div>
+             <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span className="bg-white text-black px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-xl">Zoom Comparison</span>
+             </div>
+          </motion.div>
+        ))}
       </div>
+
+      <motion.div 
+        className="flex justify-center"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      >
+         <a href="/services" className="inline-flex items-center justify-center gap-3 bg-white text-black border border-black/5 rounded-full px-8 py-4 text-[11px] font-black tracking-widest uppercase hover:bg-black hover:text-white transition-all shadow-[0_8px_30px_rgb(0,0,0,0.04)]">Explore All 19 Services —</a>
+      </motion.div>
     </section>
   );
 };

@@ -1,27 +1,41 @@
 import React from 'react';
-import { Users, Eye, Zap, DollarSign, Activity } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-const tickerItems = [
-  { text: "For eCommerce brands, photographers, agencies.", icon: Users },
-  { text: "Review before you pay — not after.", icon: Eye },
-  { text: "24h turnaround. Set by you.", icon: Zap },
-  { text: "Starting at $0.19/image.", icon: DollarSign },
-  { text: "Real-time tracking. No black box.", icon: Activity },
+const tags = [
+  "HUMAN-PATHED", "NO AUTOMATED WANDS", "EDITORIAL-GRADE", 
+  "100% REFUND GUARANTEE", "PIXEL-PERFECT", "FLAWLESS TRANSITIONS", 
+  "ENTERPRISE BATCHING", "AGENCY SCALING", "NO AI TRAINING"
 ];
 
 export const Ticker: React.FC = () => {
   return (
-    <div className="bg-black py-5 overflow-hidden">
-      <div className="flex animate-scroll whitespace-nowrap items-center">
-        {[...tickerItems, ...tickerItems, ...tickerItems].map((item, i) => (
-          <div key={i} className="flex items-center gap-4 px-12 group last:pr-0">
-            <item.icon className="w-4 h-4 text-white opacity-80" strokeWidth={2.5} />
-            <span className="text-[11px] font-black uppercase tracking-[0.15em] text-white">
-              {item.text}
-            </span>
-          </div>
-        ))}
-      </div>
+    <div className="bg-[#6366F1] py-5 overflow-hidden border-y border-indigo-400 relative">
+      {/* Gradient masks for smooth edges */}
+      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#6366F1] to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#6366F1] to-transparent z-10 pointer-events-none"></div>
+      
+      <motion.div 
+        className="flex w-max"
+        animate={{ x: ["0%", "-50%"] }}
+        transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
+      >
+        <div className="flex px-4">
+          {tags.map((tag, idx) => (
+            <div key={idx} className="flex items-center text-white mr-12 whitespace-nowrap">
+              <span className="font-outfit font-black uppercase text-xs tracking-widest">{tag}</span>
+              <span className="ml-12 text-white/40 font-bold">•</span>
+            </div>
+          ))}
+        </div>
+        <div className="flex px-4">
+          {tags.map((tag, idx) => (
+            <div key={'dup'+idx} className="flex items-center text-white mr-12 whitespace-nowrap">
+              <span className="font-outfit font-black uppercase text-xs tracking-widest">{tag}</span>
+              <span className="ml-12 text-white/40 font-bold">•</span>
+            </div>
+          ))}
+        </div>
+      </motion.div>
     </div>
   );
 };

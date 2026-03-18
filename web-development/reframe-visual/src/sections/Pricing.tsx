@@ -1,50 +1,54 @@
 import React from 'react';
-import { Check } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-const plans = [
-  { name: "Marketplace Ready", price: "0.49", services: ["BG Removal", "Shadow", "Color Correction"] },
-  { name: "Ghost Mannequin", price: "1.54", services: ["Ghost + Garment", "Color", "BG"], popular: true },
-  { name: "Jewelry Essentials", price: "1.54", services: ["BG Removal", "Jewelry Retouch", "Shadow"] },
+const tiers = [
+  { name: 'Marketplace Ready', price: '$1.29', services: ['Background Removal', 'Shadow Creation', 'Color Correction'] },
+  { name: 'Catalog Essential', price: '$1.63', services: ['Clipping Path', 'Complex Shadow', 'Editorial Masking'], best: true },
+  { name: 'Apparel Starter', price: '$1.53', services: ['Ghost Mannequin', 'Symmetry Fix', 'Blemish Removal'] }
 ];
 
 export const Pricing: React.FC = () => {
   return (
-    <section id="pricing" className="py-24 md:py-32 bg-white border-b border-black">
-      <div className="container mx-auto px-6 md:px-20">
-        <div className="flex flex-col gap-6 mb-24 max-w-3xl border-l-[3px] border-black pl-8">
-          <h2 className="text-5xl md:text-7xl font-outfit font-black text-black leading-none uppercase">
-            Pricing built <br />differently.
-          </h2>
-          <p className="text-sm font-bold tracking-widest text-[#6366F1] uppercase leading-relaxed">
-            The industry built its pricing for resellers. Reframe pricing is built for you.
-          </p>
-        </div>
+    <section id="pricing" className="bg-[#F9F9F9] py-32 px-10 md:px-20 lg:px-[10%] xl:px-[12%] overflow-hidden">
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        className="text-center mb-20"
+      >
+        <span className="text-[#6366F1] font-bold tracking-widest uppercase text-[10px] mb-4 block">Unified Rates</span>
+        <h2 className="text-4xl md:text-6xl font-outfit font-black uppercase tracking-tight text-black mb-6">Simple Bundles. <br/> No Hidden Caps.</h2>
+        <p className="max-w-xl mx-auto text-black/60 font-medium">All prices are calculated exactly as the sum of services at 24h speed. Select the pre-configured engine for your production.</p>
+      </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 px-2">
-          {plans.map((plan, i) => (
-            <div key={i} className={`relative p-10 rounded-xl border-2 ${plan.popular ? 'border-[#6366F1] bg-[#6366F1]/5 shadow-[8px_8px_0px_#6366F1]' : 'border-black bg-white shadow-[8px_8px_0px_#121212]'} flex flex-col gap-8 transition-transform hover:-translate-y-1`}>
-              {plan.popular && <div className="absolute -top-3 right-6 bg-black text-white text-[10px] font-black px-4 py-1.5 rounded-xl uppercase tracking-widest">Most Popular</div>}
-              <div>
-                <h3 className="text-lg font-outfit font-black text-black uppercase mb-4 tracking-tight leading-none">{plan.name}</h3>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-6xl font-outfit font-black text-black tracking-tighter">${plan.price}</span>
-                  <span className="text-black font-bold text-[10px] uppercase tracking-widest">/ image</span>
-                </div>
-              </div>
-              <div className={`h-[2px] w-full ${plan.popular ? 'bg-[#6366F1]' : 'bg-black'} opacity-20`}></div>
-              <ul className="space-y-5 flex-grow">
-                {plan.services.map((svc, j) => (
-                  <li key={j} className="flex items-center gap-4 text-[11px] font-black uppercase text-black tracking-widest">
-                    <Check className={`w-4 h-4 ${plan.popular ? 'text-[#6366F1]' : 'text-black'}`} strokeWidth={3} /> {svc}
-                  </li>
-                ))}
-              </ul>
-              <button className={`w-full py-4 rounded-2xl font-black text-[11px] uppercase tracking-[0.15em] transition-all border-2 ${plan.popular ? 'bg-[#6366F1] text-white border-[#6366F1] hover:bg-black hover:border-black' : 'bg-white text-black border-black hover:bg-black hover:text-white'} active:scale-95 duration-200 mt-4`}>
-                Get Started
-              </button>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {tiers.map((t, i) => (
+          <motion.div 
+            key={i}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.15 }}
+            className={`bg-white border rounded-3xl p-10 flex flex-col ${t.best ? 'border-indigo-500 shadow-[0_30px_60px_rgba(99,102,241,0.1)] ring-2 ring-indigo-50' : 'border-black/5 shadow-xl shadow-black/5'}`}
+          >
+            {t.best && <span className="bg-[#6366F1] text-white px-3 py-1 text-[9px] font-bold uppercase tracking-widest mb-6 rounded-full self-start">Most Popular</span>}
+            <h3 className="text-2xl font-outfit font-black uppercase tracking-tight mb-8">{t.name}</h3>
+            <div className="flex items-end gap-2 mb-10">
+              <span className="text-4xl font-black font-outfit">{t.price}</span>
+              <span className="text-[10px] font-bold tracking-widest uppercase text-black/40 mb-1">/ Base Item</span>
             </div>
-          ))}
-        </div>
+            <ul className="space-y-4 mb-12 flex-grow">
+              {t.services.map((s, j) => (
+                <li key={j} className="flex gap-3 text-sm font-medium items-center">
+                  <span className="text-[#6366F1] font-bold">✓</span> {s}
+                </li>
+              ))}
+            </ul>
+            <button className={`w-full py-5 rounded-full uppercase text-[11px] font-black tracking-widest transition-all ${t.best ? 'bg-[#6366F1] text-white shadow-lg' : 'bg-black text-white hover:bg-gray-800'}`}>
+              Select Bundle
+            </button>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
