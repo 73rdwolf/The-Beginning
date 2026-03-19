@@ -6,3 +6,4 @@
 4. **Visual Prototyping:** When requested frontend/UI modifications, provide an ASCII art representation beforehand for clarity.
 5. **Execution Loop:** Run the application after completing revisions (if not active) to ensure seamless development.
 6. **No Assumptions (ANTI-ASSUMPTION PROTOCOL):** Do not make unprompted assumptions about design, architecture, or flow. If any requirement is confusing or heavily open-ended, STOP and provide the user with a list of specific questions containing numbered, multiple-choice options. Wait for the user to select an option before proceeding.
+7. **Vercel Deployment Protocol:** When instructed to "push to Vercel/Varcel," the assistant must stage all changes, commit them, push to the current or a new feature branch (following Rule 2), and then execute `npx vercel --prod --yes` to update the production site at `https://reframe-visual.vercel.app/`.
